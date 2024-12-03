@@ -14,4 +14,4 @@ como las actividades al aire libre</p>
     <li>  Mercado libre,por lo hetereogeneo de todo lo que ofrece</li> 
     <li>Weekend,tanto su revista como su sitio,ya que me gusta mucho la pesca y el sitio ofrece todo al respecto</li>
    <li>El Pato</li>
-# </ul>
+ </ul>
