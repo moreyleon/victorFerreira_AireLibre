@@ -15,3 +15,9 @@ como las actividades al aire libre</p>
     <li>Weekend,tanto su revista como su sitio,ya que me gusta mucho la pesca y el sitio ofrece todo al respecto</li>
    <li>El Pato</li>
  </ul>
+
+
+<h1>Wireframe y boceto</h1>
+<a href="https://miro.com/welcomeonboard/amtkRWxiaUJ1UUQrNW92ZTdINFNKbXFPeTlkd1pmcHdzQWxINHBsMlB0RHZRL24rbkMvMk5lNEk3NnFSMVVoOEdYZiszZG1iTDdadUNXQjZhT00xRTFsbDVTdVlMK2ZlTXNPcU9uYldBdFNtT0tRT2pjWjFYZm9YS0hBSE01eW0hZQ==?share_link_id=672532880175 "></a>
+
+<a href=" https://miro.com/welcomeonboard/RFEza0lnTVVzbFFqSFg3OUtOQmFVMHdOZTZsdEhBbnpPaVpMeHF3Q0JnUllSMWxlRG1WZVFXVjBkMVRCOWdxeVJHU0JJRUhBUzdHUzdMTXUzUVRiRlZsbDVTdVlMK2ZlTXNPcU9uYldBdFNtT0tRT2pjWjFYZm9YS0hBSE01eW0hZQ==?share_link_id=632672228337"><a>
