@@ -20,5 +20,5 @@ como las actividades al aire libre</p>
 <h1>Wireframe y boceto</h1>
 <ul>
 <li><a href="https://miro.com/app/board/uXjVL8M93zw=/ ">Boceto</a></li>
-<li><a href=" https://miro.com/app/board/uXjVL9G8d1k=/">Wireframe</a></li>
+<li><a href="https://miro.com/app/board/uXjVL9G8d1k=/ ">Wireframe</a></li>
 </ul>
