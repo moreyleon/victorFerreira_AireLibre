@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+header{
+    padding: 10px;
+    background:linear-gradient(#5dc9b6,#A50034)  ;
+}
+h1{
+    text-align: center;
+    padding: 5px
+    
+}
+h3{
+    padding: 5px;
+}
+.fa-magnifying-glass{
+    font-size: 40px;
+    position: relative;
+    left: -50px;
+    top: 15px;
+}
+.buscador{
+    text-align: center;
+    width: 80%;
+    height: 50px;
+    
+}
+.comercial img{
+    display: none;
+}
+.nav1{
+    display: none;
+}
+.nav2{
+    display: none;
+}
+.fa-bars{
+    color: solid black 5px;
+    padding: 10px;
+}
+
+@media (min-width: 768px){
+
+}
+
+
+@media (min-width: 1024px){
+    
+}
