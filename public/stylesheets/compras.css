@@ -1,4 +1,17 @@
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
+.cantidad{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    text-align: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
 
 
 

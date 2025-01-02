@@ -1,0 +1,35 @@
+<%- include('partials/head') %>
+
+    <body>
+        <header class="header">
+            <p>Login</p>
+            <h1>Aire Libre</h1>
+            <p>Vive tu propia Aventura!!!</p>
+        </header>
+
+        <body>
+            <main>
+                <form action="/login" method="post">
+                    <div class="form-login">
+                        <label for="Nombre">Nombre de usuario</label>
+                        <input type="text" name="Nombre">
+                    </div>
+                    <div class="form-login">
+                        <label for="email">Correo electronico</label>
+                        <input type="text">
+                    </div> 
+                         </form>
+
+                         <div>
+                        <button type="submit">Ingresar</button>
+                        </div>
+                        <div class="olvidaste">
+                            <p>¿Olvidaste tu contraseña?</p>
+                            <button type="submit">Recuperar contraseña</button>
+                        </div>
+              
+            </main>
+            <%- include('partials/footer') %>
+        </body>
+
+        </html>

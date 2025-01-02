@@ -1,10 +1,34 @@
+.volver{
+    margin-top:20px ;
+}
+.header {
+    display: flex;
 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
 
-
-
-
-
-
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+label {
+    display: flex;
+    
+    
+    
+}
+form{
+    padding-bottom: 20px;
+}
+.registrarse{
+    margin-bottom: 10px;
+}
 @media (min-width: 768px){
 
 }

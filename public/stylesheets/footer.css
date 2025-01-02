@@ -13,11 +13,22 @@
 
 .footer ul li{
     font-size: small;
+    padding-top: 10px;
 }
 
 
 
 @media (min-width: 768px){
+    ul {
+        display: flex;
+
+        list-style: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    
 
 }
 

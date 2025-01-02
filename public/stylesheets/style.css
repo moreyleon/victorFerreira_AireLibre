@@ -3,6 +3,11 @@
 @import "./header.css";
 @import "./index.css";
 @import "./footer.css";
+@import "./productos.css";
+@import "./compras.css";
+@import "./register.css";
+@import "./login.css";
+
  
 body{
     font-family: "Agdasima", serif;

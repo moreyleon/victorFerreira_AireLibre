@@ -1,25 +1,35 @@
+
 *{
     padding: 0;
     margin: 0;
     text-align: center;
    
 }
+.banner img{
+    display: none;
+}
 main{
+    display: flex;
+    align-content: center;
      background-color:#5dc9b6 ;
+}
+.producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: column;
+    gap: 10px;
+    margin-top: 20px;
+    
 }
 
 article img{
-    width: 40%;
+    width: 20%;
     background-color: white;
 }
-article{
-    border: solid black 1px;
-    padding: 10px;
-    width: 90%;
-    margin-left: 35px;
-    margin-bottom: 35px;
-    border-radius: 10px;
-}
+
+
 h2{
     padding: 10px;
     
@@ -32,10 +42,40 @@ h2{
 }
 
     
-@media (min-width: 768px){
+
+  
+@media (min-width:768px){
+   .banner img{
+    display: block;
+    width: 100vw;
+   }
+
+.producto{  
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3px; 
+    padding: 5px;  
+    width: 95%;
+}  
+
+.articulo{  
+    width: 50%;
+
+    background-color: #f4f4f4; 
+    border: 1px solid #ddd; 
+    border-radius: 8px;  
+    padding: 16px; 
+    text-align: center; 
+    width: 100%;
+}
+.iconos{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 
 }
 
+}
 
 @media (min-width: 1024px){
     

@@ -1,14 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+   
+}
+main{
+     background-color:#5dc9b6 ;
+}
 
+article img{
+    width: 40%;
+    background-color: white;
+}
+article{
+    border: solid black 1px;
+    padding: 10px;
+    width: 90%;
+    margin-left: 35px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+}
+h2{
+    padding: 10px;
+    
+}
+.fa-credit-card{
+    margin: 20px;
+}
+.fa-wallet{
+    margin: 20px;
+}
 
+    
 
+  
+@media (min-width:768px){
+   
+.banner img{
+    width: 100vw;
+}
 
+.producto{  
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3px; 
+    padding: 5px;  
+    width: 95%;
+}  
 
+.articulo{  
+    background-color: #f4f4f4; 
+    border: 1px solid #ddd; 
+    border-radius: 8px;  
+    padding: 16px; 
+    text-align: center; 
+    width: 100%;
+}
 
-@media (min-width: 768px){
 
 }
+
+
+
 
 
 @media (min-width: 1024px){
     
 }
+
+
+
+
+
