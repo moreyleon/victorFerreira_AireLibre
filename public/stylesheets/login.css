@@ -1,4 +1,34 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
 
+.form-login label {
+    width: 100px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-login input {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 15px;
+}
+ 
+.ingresar{
+    background: linear-gradient(#5dc9b6, #A50034);
+    padding: 5px;
+    border-radius: 4px;
+    margin: 10px;
+    font-weight: 300;
+    font-size: 12px;
+}
 
 
 
@@ -6,14 +36,15 @@
 header{
     padding: 20px;
 }
-h1{
-    position: absolute;
+.header p{
+    display: block;
+    
 }
 p{
     margin: 0;
 font-size: 20px;
 }
-form{
+.form{
     display: flex;
     width: 100%;
     flex-direction: column;

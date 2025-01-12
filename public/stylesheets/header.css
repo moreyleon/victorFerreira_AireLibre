@@ -17,26 +17,30 @@
         padding: 30px;
     }
 
-    input {
-        width: 80%;
-        height: 40px;
+    .logo_input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        input{
+            width: 80%;
+            padding: 10px;
+            border-radius: 3px;
+            border: none;
+            margin-left: 30px;
+        }
+        
     }
 
     .fa-magnifying-glass {
         color: white;
-        font-size: 20px;
+        font-size: 16px;
         padding: 10px;
         background-color: #5dc9b6;
         border-radius: 3px;
         position: relative;
-        left: -45px;
-        top: 3px;
-    }
-
-    h3 {
-        text-align: center;
-        margin-bottom: 15px;
-        padding: 10px;
+        left: -35px;
+        top: 1px;
     }
 
     .nav1 {
@@ -63,40 +67,37 @@
 
     @media (min-width: 768px){
     
-
-
         .logo {
             display: flex;
             justify-content: start;
-
-            margin-left: 5px;
-
+            padding: 0;
+            margin-left: 10px;
         }
 
-        input {
-            width: 70%;
+        .logo input {
+            width: 80%;
         }
 
         .logo_input {
+            width: 80%;
             position: relative;
-            left: 100px;
-            bottom: 45px;
+            left: 145px;
+            bottom: 50px;
         }
 
         .fa-magnifying-glass {
             position: relative;
             left: -50px;
-            top: 3px;
-            font-size: 24px;
+            
+            font-size: 16px;
             left: -35px;
 
         }
-
-        h3 {
-            text-align: left;
+        .leyenda {
             position: relative;
-            top: -20px;
+            bottom: 50px;
         }
+       
 
         .burger-menu {
             display: none;
@@ -140,6 +141,7 @@
             justify-content: space-between;
             padding: 10px;
             background: linear-gradient(#5dc9b6, #A50034);
+            border-radius: 5px;
         }
     }
 
@@ -151,5 +153,18 @@
 
 
     @media (min-width: 1024px) {
+.logo{
+    margin-left: 20px;
+}
+        .logo_input{
+    margin-left: 70px;
+}
 
+
+        .fa-magnifying-glass {
+            position: relative;
+            left: -35px;
+            
+            font-size: 16px;
     }
+}
