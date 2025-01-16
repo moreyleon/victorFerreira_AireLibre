@@ -42,14 +42,18 @@
         left: -35px;
         top: 1px;
     }
-
-    .nav1 {
-        display: none;
-    }
-
-    .nav2 {
-        display: none;
-    }
+li{
+    list-style: none;
+}
+#menu{
+    display: none;
+}
+.nav1{
+    display: none;
+}
+.nav2{
+    display: none;
+}
 
     .fa-bars {
         color: black;
@@ -58,9 +62,10 @@
         background-color: #5dc9b6;
         border-radius: 3px;
     }
-    .navegacion{
-        display: none;
+    .burger-menu{
+        padding: 10px  ;
     }
+    
 
 
 
@@ -148,10 +153,6 @@
 
 
 
-
-
-
-
     @media (min-width: 1024px) {
 .logo{
     margin-left: 20px;
@@ -168,3 +169,4 @@
             font-size: 16px;
     }
 }
+

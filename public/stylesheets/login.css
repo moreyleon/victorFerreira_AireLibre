@@ -38,11 +38,11 @@ header{
 }
 .header p{
     display: block;
-    
+    font-size: 30px;
 }
 p{
     margin: 0;
-font-size: 20px;
+
 }
 .form{
     display: flex;

@@ -1,11 +1,11 @@
  const usuario = {
 
 register: (req,res,next) => {
-    res.render('register');
+    res.render('users/register');
  
 },
 login : (req,res,next) => {
-    res.render('login');    
+    res.render('users/login');    
 }
 
 

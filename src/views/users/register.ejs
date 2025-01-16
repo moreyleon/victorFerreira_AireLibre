@@ -1,4 +1,4 @@
- <%- include('partials/head') %>
+ <%- include('../partials/head') %>
 
     <body>
         <header class="header">
@@ -7,8 +7,9 @@
             <p>Vive tu propia Aventura!!!</p>
         </header>
         <main>
+            <a href="/">
             <button class="volver">Volver</button>
-            
+            </a>
             <form action="../users/register" method="POST">
                 <div class="form-group">
                     <label for="Nombre">Nombre</label>
@@ -36,7 +37,7 @@
                 <button class="registrarse" type="submit">Registrarse</button>
             </div>
         </main>
-        <%- include('partials/footer') %>
+        <%- include('../partials/footer') %>
     </body>
 
     </html>

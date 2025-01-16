@@ -1,14 +1,15 @@
 var express = require('express');
 var router = express.Router();
-const {detalle} = require('../controllers/productControllers');
+const {detalle,admin,add,edit,sports,adventure} = require('../controllers/productControllers');
 
 
 
-router.get('/detalle', detalle);
+router.get('/detalle' , detalle);
+router.get('/admin' , admin);
+router.get('/add' , add);
+router.get('/edit' , edit);
+router.get('/sports', sports);
+router.get('/adventure', adventure);
 
-/*router.get('/agregar', agregar);
-router.get('/editar', editar);
-*/
-    
 
 module.exports = router;
