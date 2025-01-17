@@ -1,15 +1,21 @@
-<%- include('partials/head') %>
+<%- include('../partials/head') %>
 
     <body>
         <header class="header">
-            <p>Login</p>
-            <h1>Aire Libre</h1>
+             <h1>Aire Libre</h1>
+            <h2>Login</h2>
             <p>Vive tu propia Aventura!!!</p>
+                
+                    <a href="/product/admin"><i class="fa-solid fa-gear"></a></i>
         </header>
 
         <body>
             <main>
-                <form action="/login" method="post">
+
+                <a href="/">
+                    <button class="volver">Volver</button>
+                    </a>
+                <form class="form" action="../users/login" method="post">
                     <div class="form-login">
                         <label for="Nombre">Nombre de usuario</label>
                         <input type="text" name="Nombre">
@@ -21,15 +27,15 @@
                          </form>
 
                          <div>
-                        <button type="submit">Ingresar</button>
+                        <button  class="ingresar" type="submit">Ingresar</button>
                         </div>
                         <div class="olvidaste">
                             <p>¿Olvidaste tu contraseña?</p>
-                            <button type="submit">Recuperar contraseña</button>
+                            <button class="ingresar" type="submit">Recuperar contraseña</button>
                         </div>
               
             </main>
-            <%- include('partials/footer') %>
+            <%- include('../partials/footer') %>
         </body>
 
         </html>

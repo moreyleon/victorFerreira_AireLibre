@@ -1,0 +1,43 @@
+ <%- include('../partials/head') %>
+
+    <body>
+        <header class="header">
+            <h1>Aire Libre</h1>
+            <h2>Registro</h2>
+            <p>Vive tu propia Aventura!!!</p>
+        </header>
+        <main>
+            <a href="/">
+            <button class="volver">Volver</button>
+            </a>
+            <form action="../users/register" method="POST">
+                <div class="form-group">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" name="Nombre">
+                </div>
+                <div class="form-group">
+                    <label for="Apellido">Apellido</label>
+                    <input type="text" name="Apellido">
+                </div>
+                <div class="form-group">
+                    <label for="Domicilio">Domicilio</label>
+                    <input type="text" name="Domicilio">
+                </div>
+                <div class="form-group">
+                    <label for="Provincia">Provincia</label>
+                    <input type="text" name="Provincia">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electronico</label>
+                    <input type="text">
+                </div>
+
+            </form>
+            <div>
+                <button class="registrarse" type="submit">Registrarse</button>
+            </div>
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
+
+    </html>

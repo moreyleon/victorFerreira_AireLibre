@@ -6,9 +6,11 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var productRouter = require('./routes/producto');
+var productRouter = require('./routes/product');
 var compraRouter = require('./routes/compra');
-
+//var adminRouter = require('./routes/admin');
+//var addRouter  = require('./routes/productAdd');
+//var aditRouter  = require('./routes/productEdit');
 
 var app = express();
 
@@ -20,13 +22,15 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/producto', productRouter);
-app.use('/producto', productRouter);
+app.use('/product', productRouter);
 app.use('/compra', compraRouter);
+//app.use('/admin', adminRouter);
+//app.use('/productAdd', addRouter);
+//app.use('/productEdit', aditRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

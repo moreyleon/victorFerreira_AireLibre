@@ -8,32 +8,22 @@
 .banner img{
     display: none;
 }
-main{
-    display: flex;
-    align-content: center;
-     background-color:#5dc9b6 ;
+.oferta{
+    padding-top: 20px;
 }
 .producto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: column;
-    gap: 10px;
-    margin-top: 20px;
+    margin-left: 5px;
+    padding-top: 20px;
     
 }
-
-article img{
-    width: 20%;
-    background-color: white;
-}
-
-
-h2{
+.articulo{
+    margin: 10px;
     padding: 10px;
-    
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
+
+
 .fa-credit-card{
     margin: 20px;
 }
@@ -45,29 +35,29 @@ h2{
 
   
 @media (min-width:768px){
-   .banner img{
+   
+    .banner img{
     display: block;
     width: 100vw;
    }
-
-.producto{  
+.producto{
+    display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 3px; 
-    padding: 5px;  
-    width: 95%;
-}  
-
-.articulo{  
-    width: 50%;
-
-    background-color: #f4f4f4; 
-    border: 1px solid #ddd; 
-    border-radius: 8px;  
-    padding: 16px; 
-    text-align: center; 
-    width: 100%;
+    gap: 10px; 
 }
+
+.articulo{
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px; 
+   
+}
+.precio{
+    font-weight: bold;
+}
+
 .iconos{
     display: flex;
     justify-content: center;
