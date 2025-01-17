@@ -41,20 +41,19 @@ main {
 @media (min-width:768px) {
 
    
-    .producto{
+    .detalle{
         display: flex;
         flex-wrap: nowrap;
-        flex-direction: row;
         gap: 10px; 
-    }
-    
-    .articulo{
-        display: flex;
         flex-direction: column;
-        
-        align-content: flex-start;
-        
 }
+.contenedor{
+    display: flex;
+flex-direction: column;
+align-content: flex-start;
+align-items: center;
+}
+
 
 
     
