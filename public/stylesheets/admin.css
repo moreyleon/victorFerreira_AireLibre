@@ -30,6 +30,7 @@
 .header{
 display: flex;
 flex-wrap: wrap;
+justify-content: space-between;
 }
 .header h1{
     margin-right: 70px;
@@ -74,6 +75,7 @@ align-items: center;
 
 
 .footer{
+   
     padding: 30px;
     p{
         font-size: 40px;
