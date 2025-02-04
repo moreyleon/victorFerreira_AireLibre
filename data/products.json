@@ -1,0 +1,330 @@
+
+[
+  
+    {  
+        "id": 1,  
+        "nombre": "Botines borussia classic",  
+        "descripcion": "Los botines de fútbol Borussia, como los botines Puma Borussia FG están diseñados para césped natural y ofrecen tecnología de amortiguación en la entresuela,lo que proporciona mayor comodidad",  
+        "imagen": "/images/botines-de-futbol-puma-borussia-classic-fg-negro1-640010104657001-1.jpg",  
+        "categoria": "Fútbol",  
+        "precio": 150.00  
+    },  
+    {  
+        "id": 2,  
+        "nombre": "Botines Adidas Predator 20.3",  
+        "descripcion": "Botines con tecnología de control de pelota, ideales para jugadores creativos.",  
+        "imagen": "https://example.com/botines_adidas_predator.jpg",  
+        "categoria": "Fútbol",  
+        "precio": 90.00  
+    },  
+    {  
+        "id": 3,  
+        "nombre": "Botines Puma Future Z 1.1",  
+        "descripcion": "Botines flexibles que ofrecen un ajuste perfecto para movimientos explosivos.",  
+        "imagen": "https://example.com/botines_puma_future.jpg",  
+        "categoria": "Fútbol",  
+        "precio": 110.00  
+    },  
+    {  
+        "id": 4,  
+        "nombre": "Botines New Balance Furon v6",  
+        "descripcion": "Botines ligeros diseñados para velocidad y precisión en el campo.",  
+        "imagen": "https://example.com/botines_new_balance.jpg",  
+        "categoria": "Fútbol",  
+        "precio": 95.00  
+    },  
+    {  
+        "id": 5,  
+        "nombre": "Botines Umbro Medusae 4",  
+        "descripcion": "Botines suaves y cómodos, ideales para jugadores que buscan el control del balón.",  
+        "imagen": "https://example.com/botines_umbro_medusae.jpg",  
+        "categoria": "Fútbol",  
+        "precio": 85.00  
+    },  
+    {  
+        "id": 6,  
+        "nombre": "Botines Mizuno Morelia Neo",  
+        "descripcion": "Botines de cuero premium que ofrecen un gran toque y confort en el campo.",  
+        "imagen": "https://example.com/botines_mizuno_morelia.jpg",  
+        "categoria": "Fútbol",  
+        "precio": 200.00  
+    },  
+    {  
+        "id": 7,  
+        "nombre": "Botines Asics Gel-Peak",  
+        "descripcion": "Botines ligeros con un buen amortiguamiento, perfectos para el juego rápido.",  
+        "imagen": "https://example.com/botines_asics_gel.jpg",  
+        "categoria": "Fútbol",  
+        "precio": 75.00  
+    },  
+    {  
+        "id": 8,  
+        "nombre": "Botines Nike Phantom GT",  
+        "descripcion": "Botines diseñados para control en el juego, ofrecen un gran agarre en el terreno.",  
+        "imagen": "https://example.com/botines_nike_phantom.jpg",  
+        "categoria": "Fútbol",  
+        "precio": 140.00  
+    },  
+    {  
+        "id": 9,  
+        "nombre": "Botines Adidas Copa Sense",  
+        "descripcion": "Botines clásicos hechos de cuero, ofreciendo comodidad y un toque excepcional.",  
+        "imagen": "https://example.com/botines_adidas_copa.jpg",  
+        "categoria": "Fútbol",  
+        "precio": 190.00  
+    },  
+    {  
+        "id": 10,  
+        "nombre": "Botines Joma Dribling",  
+        "descripcion": "Botines de calidad y gran durabilidad, perfectos para entrenamientos intensivos.",  
+        "imagen": "https://example.com/botines_joma_dribling.jpg",  
+        "categoria": "Fútbol",  
+        "precio": 60.00  
+    },  
+
+        {  
+            "id": 11,  
+            "nombre": "Calzado para trekking Salomon X Ultra 3",  
+            "descripcion": "Las botas de trekking son un calzado de montaña que se caracteriza por su robustez,resistencia y durabilidad. Están diseñadas para caminar por terrenos irregulares y difíciles, como montañas, bosques, ríos, etc.",  
+            "imagen": "/images/trekking.jpeg",  
+            "categoria": "Deportes",  
+            "precio": 140.00  
+        },  
+        {  
+            "id": 12,  
+            "nombre": "Zapatillas Adidas Ultraboost",  
+            "descripcion": "Zapatillas altamente cómodas con tecnología de energía de retorno, perfectas para correr.",  
+            "imagen": "https://example.com/zapatillas_adidas_ultraboost.jpg",  
+            "categoria": "Running",  
+            "precio": 180.00  
+        },  
+        {  
+            "id": 13,  
+            "nombre": "Zapatillas Puma RS-X",  
+            "descripcion": "Zapatillas con un diseño retro moderno, combinan comodidad y estilo.",  
+            "imagen": "https://example.com/zapatillas_puma_rs_x.jpg",  
+            "categoria": "Casual",  
+            "precio": 110.00  
+        },  
+        {  
+            "id": 14,  
+            "nombre": "Zapatillas New Balance 990v5",  
+            "descripcion": "Zapatillas de running que ofrecen una mezcla perfecta de soporte y comodidad.",  
+            "imagen": "https://example.com/zapatillas_new_balance_990.jpg",  
+            "categoria": "Running",  
+            "precio": 175.00  
+        },  
+        {  
+            "id": 15,  
+            "nombre": "Zapatillas Reebok Nano X1",  
+            "descripcion": "Zapatillas versátiles diseñadas para entrenamiento funcional y crossfit.",  
+            "imagen": "https://example.com/zapatillas_reebok_nano.jpg",  
+            "categoria": "Entrenamiento",  
+            "precio": 120.00  
+        },  
+        {  
+            "id": 16,  
+            "nombre": "Zapatillas Under Armour Charged Assert 8",  
+            "descripcion": "Zapatillas de running ligeras con gran capacidad de respuesta, ideales para carreras diarias.",  
+            "imagen": "https://example.com/zapatillas_under_armour.jpg",  
+            "categoria": "Deportes",  
+            "precio": 85.00  
+        },  
+        {  
+            "id": 17,  
+            "nombre": "Zapatillas Asics Gel-Excite 8",  
+            "descripcion": "Zapatillas con tecnología de amortiguación que ofrecen comodidad y soporte durante todo el día.",  
+            "imagen": "https://example.com/zapatillas_asics_gel_excite.jpg",  
+            "categoria": "Running",  
+            "precio": 95.00  
+        },  
+        {  
+            "id": 18,  
+            "nombre": "Zapatillas Saucony Endorphin Shift",  
+            "descripcion": "De alto rendimiento, ideal para corredores que buscan velocidad y comodidad.",  
+            "imagen": "https://example.com/zapatillas_saucony_endorphin.jpg",  
+            "categoria": "Running",  
+            "precio": 160000  
+        },  
+        {  
+            "id": 19,  
+            "nombre": "Zapatillas Hoka One One Bondi 7",  
+            "descripcion": "Zapatillas con máxima amortiguación y confort, perfectas para largas distancias.",  
+            "imagen": "https://example.com/zapatillas_hoka_bondi.jpg",  
+            "categoria": "Running",  
+            "precio": 160.00  
+        },  
+        {  
+            "id": 20,  
+            "nombre": "Zapatillas Skechers Go Run 600",  
+            "descripcion": "Zapatillas ligeras y cómodas con amortiguación responsive, ideales para correr o caminar.",  
+            "imagen": "https://example.com/zapatillas_skechers_go_run.jpg",  
+            "categoria": "Deportes",  
+            "precio": 75000  
+        },  
+
+            {  
+                "id": 21,  
+                "nombre": "Pelota de Fútbol Adidas Tango España",  
+                "descripcion": "Pelota oficial de fútbol, ideal para partidos y entrenamientos, con diseño icónico.",  
+                "imagen": "https://example.com/pelota_futbol_adidas.jpg",  
+                "categoria": "Fútbol",  
+                "precio": 35000  
+            },  
+            {  
+                "id": 22,  
+                "nombre": "Pelota de Baloncesto",  
+                "descripcion": "La pelota de baloncesto Molten, que se utiliza en competiciones oficialescomo la FIBA y la Liga Nacional de Básquet, tiene un peso de 510 gramos.Además cuenta con una estructura de 12 paneles y su circunferencia es de 75 a 78 cm.",  
+                "imagen": "/images/pelotabasquet.jpeg",  
+                "categoria": "Baloncesto",  
+                "precio": 120000  
+            },  
+            {  
+                "id": 23,  
+                "nombre": "Pelota de Voleibol Mikasa V300W",  
+                "descripcion": "Pelota de voleibol de alta calidad, perfecta para entrenamiento y competición.",  
+                "imagen": "https://example.com/pelota_voleibol_mikasa.jpg",  
+                "categoria": "Voleibol",  
+                "precio": 25000  
+            },  
+            {  
+                "id": 24,  
+                "nombre": "Pelota de Tenis Wilson Pro Staff",  
+                "descripcion": "Pelota de tenis premium, ideal para jugadores competitivos que buscan rendimiento.",  
+                "imagen": "https://example.com/pelota_tenis_wilson.jpg",  
+                "categoria": "Tenis",  
+                "precio": 15000  
+            },  
+            {  
+                "id": 25,  
+                "nombre": "Pelota de Rugby Gilbert Match",  
+                "descripcion": "Pelota de rugby diseñada para partidos, con una excelente durabilidad y agarre.",  
+                "imagen": "https://example.com/pelota_rugby_gilbert.jpg",  
+                "categoria": "Rugby",  
+                "precio": 40000 
+            },  
+            {  
+                "id": 26,  
+                "nombre": "Pelota de Fútbol Americano Wilson",  
+                "descripcion": "Pelota de fútbol americano con diseño profesional, ideal para jugadores y entrenadores.",  
+                "imagen": "https://example.com/pelota_futbol_americano_wilson.jpg",  
+                "categoria": "Fútbol Americano",  
+                "precio": 60000 
+            },  
+            {  
+                "id": 27,  
+                "nombre": "Pelota de Balonmano Kempa",  
+                "descripcion": "Pelota de balonmano con superficie antideslizante, ideal para entrenamientos y partidos.",  
+                "imagen": "https://example.com/pelota_balonmano_kempa.jpg",  
+                "categoria": "Balonmano",  
+                "precio": 30000  
+            },  
+            {  
+                "id": 28,  
+                "nombre": "Pelota de Softbol Wilson",  
+                "descripcion": "Pelota de softbol diseñada para entrenamiento y competición, con gran durabilidad.",  
+                "imagen": "https://example.com/pelota_softbol_wilson.jpg",  
+                "categoria": "Softbol",  
+                "precio": 25000  
+            },  
+            {  
+                "id": 29,  
+                "nombre": "Pelota de Hockey sobre Césped",  
+                "descripcion": "Pelota de hockey hecha a mano, ideal para jugar en campos de césped.",  
+                "imagen": "https://example.com/pelota_hockey.jpg",  
+                "categoria": "Hockey",  
+                "precio": 20.00  
+            },  
+            {  
+                "id": 30,  
+                "nombre": "Pelota de Pickleball Diadem",  
+                "descripcion": "Pelota de pickleball ligera, ideal para principiantes y jugadores avanzados.",  
+                "imagen": "https://example.com/pelota_pickleball.jpg",  
+                "categoria": "Pickleball",  
+                "precio": 10000  
+            },  
+
+           
+            
+    {  
+        "id": 31,  
+        "nombre": "Remera runnig dama",  
+        "descripcion": "La remera de running para mujer Nike Dri-FIT Miler es una prenda de manga cortaque te mantiene seca y cómoda durante tu carrera. Su tejido de malla transpirable y su tecnología Dri-FIT te ayudan a mantener la frescura y",  
+        "imagen": "/images/mujer-rosa1-9abe260a5c14ccecab16560082133737-480-0.png",  
+        "categoria": "Ropa Deportiva",  
+        "precio": 150000  
+    },  
+    {  
+        "id": 32,  
+        "nombre": "Pantalones Adidas Tiro 21",  
+        "descripcion": "Pantalones deportivos con corte ajustado y tecnología de secado rápido.",  
+        "imagen": "https://example.com/pantalones_adidas.jpg",  
+        "categoria": "Ropa Deportiva",  
+        "precio": 50.00  
+    },  
+    {  
+        "id": 33,  
+        "nombre": "Sudadera Puma Essentials",  
+        "descripcion": "Sudadera cómoda para entrenamiento y diario, con capucha y bolsillo frontal.",  
+        "imagen": "https://example.com/sudadera_puma.jpg",  
+        "categoria": "Ropa Deportiva",  
+        "precio": 60.00  
+    },  
+    {  
+        "id": 34,  
+        "nombre": "Mallas Reebok Speedwick",  
+        "descripcion": "Mallas largas de compresión, ideales para running y entrenamiento de alta intensidad.",  
+        "imagen": "https://example.com/mallas_reebok.jpg",  
+        "categoria": "Ropa Deportiva",  
+        "precio": 40.00  
+    },  
+    {  
+        "id": 35,  
+        "nombre": "Chaqueta Under Armour Rival",  
+        "descripcion": "Chaqueta ligera y cómoda, perfecta para calentamiento o actividades al aire libre.",  
+        "imagen": "https://example.com/chaqueta_underarmour.jpg",  
+        "categoria": "Ropa Deportiva",  
+        "precio": 55.00  
+    },  
+    {  
+        "id": 36,  
+        "nombre": "Camiseta de Compresión Skins",  
+        "descripcion": "Camiseta de compresión que mejora la circulación y rendimiento durante el ejercicio.",  
+        "imagen": "https://example.com/camiseta_skins.jpg",  
+        "categoria": "Ropa Deportiva",  
+        "precio": 45.00  
+    },  
+    {  
+        "id": 37,  
+        "nombre": "Pantalones Cortos New Balance Accelerate",  
+        "descripcion": "Pantalones cortos cómodos y ligeros, ideales para correr y entrenar.",  
+        "imagen": "https://example.com/pantalones_cortos_nb.jpg",  
+        "categoria": "Ropa Deportiva",  
+        "precio": 30.00  
+    },  
+    {  
+        "id": 38,  
+        "nombre": "Sostén Deportivo Champion",  
+        "descripcion": "Sostén deportivo con soporte medio, ideal para actividades de bajo a medio impacto.",  
+        "imagen": "https://example.com/sosten_champion.jpg",  
+        "categoria": "Ropa Deportiva",  
+        "precio": 25.00  
+    },  
+    {  
+        "id": 39,  
+        "nombre": "Zapatillas de Correr Mizuno Wave Rider",  
+        "descripcion": "Zapatillas ligeras y cómodas, ideales para corredores que buscan estabilidad.",  
+        "imagen": "https://example.com/zapatillas_mizuno.jpg",  
+        "categoria": "Calzado Deportivo",  
+        "precio": 120.00  
+    },  
+    {  
+        "id": 40,  
+        "nombre": "Gorra Adidas Essential",  
+        "descripcion": "Gorra deportiva con protección UV, ideal para actividades al aire libre.",  
+        "imagen": "https://example.com/gorra_adidas.jpg",  
+        "categoria": "Accesorios",  
+        "precio": 20.00  
+    }  
+
+]

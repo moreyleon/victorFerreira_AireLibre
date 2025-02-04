@@ -1,0 +1,92 @@
+[  
+    {  
+        "id": 1,  
+        "firstName": "Juan",  
+        "lastName": "Pérez",  
+        "email": "juan.perez@example.com",  
+        "password": "contraseña123",  
+        "category": "Admin",  
+        "image": "https://example.com/images/juan.jpg"  
+    },  
+    {  
+        "id": 2,  
+        "firstName": "María",  
+        "lastName": "Gómez",  
+        "email": "maria.gomez@example.com",  
+        "password": "contraseña456",  
+        "category": "User",  
+        "image": "https://example.com/images/maria.jpg"  
+    },  
+    {  
+        "id": 3,  
+        "firstName": "Carlos",  
+        "lastName": "López",  
+        "email": "carlos.lopez@example.com",  
+        "password": "contraseña789",  
+        "category": "User",  
+        "image": "https://example.com/images/carlos.jpg"  
+    },  
+    {  
+        "id": 4,  
+        "firstName": "Ana",  
+        "lastName": "Martínez",  
+        "email": "ana.martinez@example.com",  
+        "password": "contraseña101",  
+        "category": "Admin",  
+        "image": "https://example.com/images/ana.jpg"  
+    },  
+    {  
+        "id": 5,  
+        "firstName": "Luis",  
+        "lastName": "Hernández",  
+        "email": "luis.hernandez@example.com",  
+        "password": "contraseña102",  
+        "category": "User",  
+        "image": "https://example.com/images/luis.jpg"  
+    },  
+    {  
+        "id": 6,  
+        "firstName": "Elena",  
+        "lastName": "Sánchez",  
+        "email": "elena.sanchez@example.com",  
+        "password": "contraseña103",  
+        "category": "User",  
+        "image": "https://example.com/images/elena.jpg"  
+    },  
+    {  
+        "id": 7,  
+        "firstName": "José",  
+        "lastName": "Ramírez",  
+        "email": "jose.ramirez@example.com",  
+        "password": "contraseña104",  
+        "category": "Admin",  
+        "image": "https://example.com/images/jose.jpg"  
+    },  
+    {  
+        "id": 8,  
+        "firstName": "Isabel",  
+        "lastName": "Torres",  
+        "email": "isabel.torres@example.com",  
+        "password": "contraseña105",  
+        "category": "User",  
+        "image": "https://example.com/images/isabel.jpg"  
+    },  
+    {  
+        "id": 9,  
+        "firstName": "David",  
+        "lastName": "Flores",  
+        "email": "david.flores@example.com",  
+        "password": "contraseña106",  
+        "category": "User",  
+        "image": "https://example.com/images/david.jpg"  
+    },  
+    {  
+        "id": 10,  
+        "firstName": "Laura",  
+        "lastName": "Cruz",  
+        "email": "laura.cruz@example.com",  
+        "password": "contraseña107",  
+        "category": "Admin",  
+        "image": "https://example.com/images/laura.jpg"  
+    }  
+]
