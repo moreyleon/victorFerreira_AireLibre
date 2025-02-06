@@ -1,19 +1,22 @@
 const producto = {
 
-detalle : (req, res,next) => {
+list : (req, res,next) => {
+    res.render('productList');
+},
+
+create: (req,res,next) => {
+    res.render('products/productAdd');
+},
+detail : (req, res,next) => {
     res.render('productDetail');
 
 },
- admin :  (req, res, next) => {
-    res.render('admin');
- },
 
-
-add: (req,res,next) => {
-    res.render('productAdd');
-},
 edit: (req,res,next) => {
-    res.render('productEdit');
+    res.render('products/productEdit');
+},
+delete: (req,res,next) => {
+    res.send('productDelete');
 },
 
 sports :(req,res,next) => {
@@ -22,6 +25,7 @@ sports :(req,res,next) => {
 adventure :(req,res,next) => {
     res.render('aventura');
 }
+ 
 
 } 
 
