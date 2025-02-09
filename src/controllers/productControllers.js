@@ -1,7 +1,11 @@
+const fs = require('fs')
+const products = require('../data/products.json')
+
 const producto = {
 
 list : (req, res,next) => {
-    res.render('productList');
+    res.render('products/productList');
+
 },
 
 create: (req,res,next) => {
@@ -20,10 +24,10 @@ delete: (req,res,next) => {
 },
 
 sports :(req,res,next) => {
-    res.render('deportes');
+    res.render('products/deportes');
 },
 adventure :(req,res,next) => {
-    res.render('aventura');
+    res.render('products/aventura');
 }
  
 

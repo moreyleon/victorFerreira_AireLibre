@@ -1,7 +1,7 @@
 const compra = {
 
 compra: (req, res ,next) => {
-    res.render('productCartl');
+    res.render('products/productCartl');
 
 
 }
