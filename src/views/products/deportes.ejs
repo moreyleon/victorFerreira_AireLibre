@@ -5,6 +5,22 @@
 <main>
 
     <h1>Sector Deporte</h1>
+
+    <section class="producto deportes">
+        <% deportes.forEach((product)=> { %>
+          <article class="articulo detalle">
+
+            <a href="/products/productDetail/<%=product.id%>">
+              <img src="/images/<%= product.imagen %>" alt=""></a>
+            <p>
+              <%=product.nombre %>
+            </p>
+            <p>
+              <%=product.precio %>
+            </p>
+          </article>
+          <% }) %>
+      </section>
   
 </main>
 

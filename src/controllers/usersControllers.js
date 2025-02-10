@@ -6,8 +6,11 @@ register: (req,res,next) => {
 },
 login : (req,res,next) => {
     res.render('users/login');    
-}
+},
+admin : (req,res,next) => {
+    res.render('users/admin');    
 
+}
 
 }
 

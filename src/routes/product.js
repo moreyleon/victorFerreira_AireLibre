@@ -1,19 +1,19 @@
 var express = require('express');
 var router = express.Router();
-const {detail,create,edit,sports,adventure} = require('../controllers/productControllers');
+const {list,detail,create,edit,sports,adventure} = require('../controllers/productControllers');
 
 
-router.get('/products');
+router.get('/product', list);
 
 router.get('/create' , create);
-router.post('/products')
+router.post('/product')
 
-router.get('/products/:id' , detail);
+router.get('/product/:id' , detail);
 ;
 router.get('/edit' , edit);
-router.put('/products/edit',);
+router.put('/product/edit',);
 
-router.delete('/products/:id' );
+router.delete('/product/:id' );
 
 
 router.get('/sports', sports);

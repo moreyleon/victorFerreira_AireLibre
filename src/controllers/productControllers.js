@@ -1,5 +1,6 @@
 const fs = require('fs')
 const products = require('../data/products.json')
+const path = require('path')
 
 const producto = {
 
@@ -12,7 +13,7 @@ create: (req,res,next) => {
     res.render('products/productAdd');
 },
 detail : (req, res,next) => {
-    res.render('productDetail');
+    res.render('products/productDetail');
 
 },
 
@@ -24,10 +25,37 @@ delete: (req,res,next) => {
 },
 
 sports :(req,res,next) => {
-    res.render('products/deportes');
+     const read = (file = "") => {
+          return JSON.parse(fs.readFileSync(path.join(__dirname,file),'utf-8'))
+     }
+     const products = read('../data/products.json');
+
+     const deportes = products.filter(producto => {
+        return producto.categoria == "Deporte" ;})
+
+
+    res.render('products/deportes',{
+       deportes
+    });
+
 },
 adventure :(req,res,next) => {
-    res.render('products/aventura');
+
+    const readJson = (file = "") => {
+        return JSON.parse(fs.readFileSync(path.join(__dirname,file),'utf-8'))
+   }
+   const products = readJson('../data/products.json');
+
+   const aventura = products.filter(producto => {
+      return producto.categoria == "Aventura" ;})
+
+
+  res.render('products/aventura',{
+     aventura
+  });
+
+
+ 
 }
  
 
