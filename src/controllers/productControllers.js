@@ -12,14 +12,21 @@ list : (req, res,next) => {
 create: (req,res,next) => {
     res.render('products/productAdd');
 },
+
 detail : (req, res,next) => {
-    res.render('products/productDetail');
+    
+   const product = products.find(product => product.id === +req.params.id);
+   
+return res.render('products/productDetail',{
+        ...product
+    })
 
 },
 
 edit: (req,res,next) => {
     res.render('products/productEdit');
 },
+
 delete: (req,res,next) => {
     res.send('productDelete');
 },
@@ -60,12 +67,6 @@ adventure :(req,res,next) => {
  
 
 } 
-
-
-
-
-
-
 
 
 module.exports = producto;

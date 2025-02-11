@@ -3,6 +3,20 @@
     <%- include('partials/header') %>
     <main>
 <h1>Productos</h1>
+
+
+    <section class="products">
+        <h2>Lista de productos</h2>
+        <ul>
+            <% products.forEach((product)=> { %>
+                <li>
+                    <a href="/products/<%=product.id%>">
+                        <h3><%=product.name %></h3>
+                        <p><%=product.price %></p>
+                    </a>
+                </li>
+            <% }) %>
+        </ul>
     </main>
     <%- include('partials/footer') %>
 </body>

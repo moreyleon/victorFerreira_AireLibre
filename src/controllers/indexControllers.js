@@ -23,9 +23,8 @@ const fs = require('fs');
   },
   admin : (req, res, next) => {
     res.render('admin');
-  },
+  }
 
-  
 }
 
 
