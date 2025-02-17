@@ -1,22 +1,62 @@
-<%- include('../partials/head'{title:'Lista'}) %>
-<body>
-    <%- include('partials/header') %>
+<%- include('../partials/head',{title:'Lista'}) %>
+
+  <body>
+    <header class="header">
+      
+  <nav>
+      
+      <ul>
+          <li><a href="/product/add ">Agregar</a></li>
+        
+          <li><a href="/product/list">Lista de productos</a></li>
+  </ul>
+</nav>
+  <a href="/">
+  <i class="fa-solid fa-person-walking-arrow-right"></i>
+  </a>
+  
+</header>
+
     <main>
-<h1>Productos</h1>
+      <h1>Productos</h1>
 
 
-    <section class="products">
-        <h2>Lista de productos</h2>
-        <ul>
-            <% products.forEach((product)=> { %>
-                <li>
-                    <a href="/products/<%=product.id%>">
-                        <h3><%=product.name %></h3>
-                        <p><%=product.price %></p>
-                    </a>
-                </li>
-            <% }) %>
-        </ul>
+      <h2>Lista de productos</h2>
+      <table>
+      <thead>
+        <tr>
+        <th>#</th>
+        <th>Categoria</th>
+         <th>Nombre</th>
+        <th>Precio</th>
+      </tr>
+      </thead>
+        
+         <tbody> 
+          
+            <% products.forEach(({id, categoria, nombre, precio})=> { %>
+            <tr>
+             
+              <th><%= id %></th>
+              <th>
+                <%=categoria %>
+              </th>
+              <th><a href="/product/edit/<%= id %>">
+                <%=nombre %>
+              </a>
+              </th>
+              <th>
+                <%=precio %>
+              </th>
+       
+      </tr>
+      <% }) %>
+     
+    </tbody>
+          </table>
+
+       
+
     </main>
-    <%- include('partials/footer') %>
-</body>
+    <%- include('../partials/footer') %>
+  </body>

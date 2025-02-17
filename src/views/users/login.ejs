@@ -15,25 +15,28 @@
                 <a href="/">
                     <button class="volver">Volver</button>
                     </a>
-                <form class="form" action="../users/login" method="post">
+                <form class="form" action="../users/identity" method="post">
                     <div class="form-login">
-                        <label for="Nombre">Nombre de usuario</label>
-                        <input type="text" name="Nombre">
+                        <label for="nombre">Nombre de usuario</label>
+                        <input type="text" name="nombre">
                     </div>
                     <div class="form-login">
-                        <label for="email">Correo electronico</label>
-                        <input type="text">
+                        <label for="correo">Correo electronico</label>
+                        <input type="text" name="correo">
                     </div> 
-                         </form>
-
                          <div>
                         <button  class="ingresar" type="submit">Ingresar</button>
                         </div>
+
+                         <div class="session">
+                            <input type="checkbox" name="recordar">
+                            <label for="recordar" name="recordar" >Desea recordar su session?</label>
+                         </div>
                         <div class="olvidaste">
                             <p>¿Olvidaste tu contraseña?</p>
                             <button class="ingresar" type="submit">Recuperar contraseña</button>
                         </div>
-              
+              </form>
             </main>
             <%- include('../partials/footer') %>
         </body>

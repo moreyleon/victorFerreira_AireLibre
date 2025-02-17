@@ -1,20 +1,50 @@
 const fs = require('fs')
-const products = require('../data/products.json')
 const path = require('path')
+const directorio = path.join(__dirname,'../data/products.json');
+const read = () => {
+        return JSON.parse(fs.readFileSync(directorio,"utf-8"))
+}
+const { v4: uuidv4 } = require("uuid");
+
 
 const producto = {
 
 list : (req, res,next) => {
-    res.render('products/productList');
 
+   const products = read();
+   return res.render('products/productsList',{
+    products
+});
+
+},
+
+add: (req,res,next) => {
+res.render('products/productAdd');
 },
 
 create: (req,res,next) => {
-    res.render('products/productAdd');
+    
+   const create = read();
+    
+    const {nombre, descripcion, categoria,precio} = req.body
+   
+    create.push({
+        id: uuidv4(),
+        nombre,
+        descripcion,
+        categoria,
+        precio
+    });
+    
+
+    fs.writeFileSync(directorio, JSON.stringify(create), "utf-8");
+
+     return res.redirect('/product/list')
+    
 },
 
 detail : (req, res,next) => {
-    
+    const products = read();
    const product = products.find(product => product.id === +req.params.id);
    
 return res.render('products/productDetail',{
@@ -24,11 +54,44 @@ return res.render('products/productDetail',{
 },
 
 edit: (req,res,next) => {
-    res.render('products/productEdit');
-},
+    const id = req.params.id;
+    const products = read();
+    const product = products.find(product => product.id == id);
+    
+    
 
-delete: (req,res,next) => {
-    res.send('productDelete');
+res.render('products/productEdit',{
+    ...product
+})
+     
+},
+update : (req,res,next) => {
+    const products = read();
+    const {nombre, precio, descripcion, categoria} = req.body
+
+    const modified = products.map(product => {
+        if(product.id === +req.params.id){
+            product.nombre = nombre.trim();
+            product.precio = +precio;
+            product.descripcion = descripcion.trim();
+            product.categoria = categoria
+        }
+        return product
+    })
+    fs.writeFileSync(directorio, JSON.stringify(modified), "utf-8");
+
+     return res.redirect('/product/list')
+},
+remove: (req,res,next) => {
+    const products = read();
+    const id = req.params.id;
+    const remove = products.filter(product => product.id != id);
+    writeFile(directorio, remove);
+
+
+    
+res.redirect('/product/list');
+
 },
 
 sports :(req,res,next) => {
@@ -66,7 +129,7 @@ adventure :(req,res,next) => {
 }
  
 
-} 
+}
 
 
 module.exports = producto;

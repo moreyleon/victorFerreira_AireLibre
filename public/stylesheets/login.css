@@ -32,8 +32,12 @@
     margin: 10px;
     font-weight: 300;
     font-size: 12px;
+    
 }
+.session{
+    margin: 10px;
 
+}
 
 
 @media(min-width: 768px){
