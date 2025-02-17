@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "correo": "juan.perez@example.com",
+        "contrasena": "contraseña123",
+        "categoria": "Admin",
+        "imagen": "https://example.com/images/juan.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "María",
+        "apellido": "Gómez",
+        "correo": "maria.gomez@example.com",
+        "contrasena": "contraseña456",
+        "categoria": "User",
+        "imagen": "https://example.com/images/maria.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Carlos",
+        "apellido": "López",
+        "correo": "carlos.lopez@example.com",
+        "contrasena": "contraseña789",
+        "categoria": "User",
+        "imagen": "https://example.com/images/carlos.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Ana",
+        "apellido": "Martínez",
+        "correo": "ana.martinez@example.com",
+        "contrasena": "contraseña101",
+        "categoria": "Admin",
+        "imagen": "https://example.com/images/ana.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Luis",
+        "apellido": "Hernández",
+        "correo": "luis.hernandez@example.com",
+        "contrasena": "contraseña102",
+        "categoria": "User",
+        "imagen": "https://example.com/images/luis.jpg"
+    },
+    {
+        "id": "bbc4e558-6c96-44fa-9c58-e39b18def95a",
+        "nombre": "victor ",
+        "apellido": "ferreira",
+        "correo": "loro@gmail.com",
+        "contrasena": [
+            "123456",
+            "123456"
+        ]
+    }
+]

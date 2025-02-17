@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
-const indexControllers = require('../controllers/indexControllers');
+const {index,admin} = require('../controllers/indexControllers');
 
-router.get('/',indexControllers); 
- 
+
+router.get('/', index);
+router.get('/admin' , admin); 
+
 
 module.exports = router;
