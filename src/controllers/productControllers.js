@@ -1,9 +1,8 @@
 const fs = require('fs')
+const  {read,parse,write,string} = require ("../data/filesystem")
 const path = require('path')
 const directorio = path.join(__dirname,'../data/products.json');
-const read = () => {
-        return JSON.parse(fs.readFileSync(directorio,"utf-8"))
-}
+
 const { v4: uuidv4 } = require("uuid");
 
 
@@ -11,7 +10,7 @@ const producto = {
 
 list : (req, res,next) => {
 
-   const products = read();
+   const products = parse(read(directorio));
    return res.render('products/productsList',{
     products
 });
@@ -24,7 +23,7 @@ res.render('products/productAdd');
 
 create: (req,res,next) => {
     
-   const create = read();
+   const create = parse(read(directorio));
     
     const {nombre, descripcion, categoria,precio} = req.body
    
@@ -37,14 +36,14 @@ create: (req,res,next) => {
     });
     
 
-    fs.writeFileSync(directorio, JSON.stringify(create), "utf-8");
+    write(directorio,string(create));
 
      return res.redirect('/product/list')
     
 },
 
 detail : (req, res,next) => {
-    const products = read();
+    const products = parse(read(directorio));
    const product = products.find(product => product.id === +req.params.id);
    
 return res.render('products/productDetail',{
@@ -55,7 +54,7 @@ return res.render('products/productDetail',{
 
 edit: (req,res,next) => {
     const id = req.params.id;
-    const products = read();
+    const products = parse(read(directorio));
     const product = products.find(product => product.id == id);
     
     
@@ -66,7 +65,7 @@ res.render('products/productEdit',{
      
 },
 update : (req,res,next) => {
-    const products = read();
+    const products =parse(read(directorio));
     const {nombre, precio, descripcion, categoria} = req.body
 
     const modified = products.map(product => {
@@ -78,15 +77,15 @@ update : (req,res,next) => {
         }
         return product
     })
-    fs.writeFileSync(directorio, JSON.stringify(modified), "utf-8");
+    write(directorio,string(modified));
 
      return res.redirect('/product/list')
 },
 remove: (req,res,next) => {
-    const products = read();
+    const products = read(directorio);
     const id = req.params.id;
     const remove = products.filter(product => product.id != id);
-    writeFile(directorio, remove);
+    write(directorio, remove);
 
 
     
@@ -95,10 +94,8 @@ res.redirect('/product/list');
 },
 
 sports :(req,res,next) => {
-     const read = (file = "") => {
-          return JSON.parse(fs.readFileSync(path.join(__dirname,file),'utf-8'))
-     }
-     const products = read('../data/products.json');
+    
+     const products = parse(read(directorio));
 
      const deportes = products.filter(producto => {
         return producto.categoria == "Deporte" ;})
@@ -111,10 +108,8 @@ sports :(req,res,next) => {
 },
 adventure :(req,res,next) => {
 
-    const readJson = (file = "") => {
-        return JSON.parse(fs.readFileSync(path.join(__dirname,file),'utf-8'))
-   }
-   const products = readJson('../data/products.json');
+    const products = parse(read(directorio));
+   
 
    const aventura = products.filter(producto => {
       return producto.categoria == "Aventura" ;})

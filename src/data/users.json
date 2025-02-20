@@ -36,22 +36,10 @@
         "imagen": "https://example.com/images/ana.jpg"
     },
     {
-        "id": 5,
-        "nombre": "Luis",
-        "apellido": "Hernández",
-        "correo": "luis.hernandez@example.com",
-        "contrasena": "contraseña102",
-        "categoria": "User",
-        "imagen": "https://example.com/images/luis.jpg"
-    },
-    {
-        "id": "bbc4e558-6c96-44fa-9c58-e39b18def95a",
+        "id": "30011295-6e1a-469d-809a-4c9a50dfe7c2",
         "nombre": "victor ",
         "apellido": "ferreira",
-        "correo": "loro@gmail.com",
-        "contrasena": [
-            "123456",
-            "123456"
-        ]
+        "correo": "victor@hotmail.com",
+        "contrasena": "$2b$10$v4FSuFn3RO6OYQ831wPVBeT/l3.BTwslT7P6lnKJQc.OevdNLsoDq"
     }
 ]

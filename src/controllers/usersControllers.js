@@ -1,4 +1,4 @@
-const fs = require('fs')
+const  {read,parse,write,string} = require ("../data/filesystem")
 const path = require('path')
 const directory = path.join(__dirname, "../data/users.json");
 const { v4: uuidv4 } = require("uuid");
@@ -14,59 +14,79 @@ const usuario = {
     login: (req, res, next) => {
         res.render('users/login');
     },
-    process: (req, res, next) => {
-        const read = (file = "") => {
-            return JSON.parse(fs.readFileSync (directory, 'utf-8'))
-        }
-        const users = read()
-        const {nombre,apellido,correo,contrasena,categoria} = req.body
+    processregister: (req, res, next) => { 
+        
+        const users = parse(read(directory));
+        
+        const { nombre,apellido,correo,contrasena,categoria } = req.body;
         const newuser = {
-            id : uuidv4(),
+            id : uuidv4(), 
             nombre,
             apellido,
             correo,
             contrasena:bcrypt.hashSync(contrasena, 10),
             categoria
-        }
-        //
-users.push(newuser)
-fs.writeFileSync(directory, JSON.stringify(users), "utf-8");
+        };
+    
+        users.push(newuser)
+       write(directory,string(users));
 
+ return res.redirect('/users/login');
 
-        return res.redirect('/users/login');
+       
     },
     identity: (req, res, next) => {
-        const read = (file = "") => {
-            return JSON.parse(fs.readFileSync (directory, 'utf-8'))
-        }
-        const users = read()
+        
+        const users = parse(read(directory));
         const {nombre, correo} = req.body
         const user = users.find(user => user.nombre === nombre &&  correo)
 
-req.session.userLogin = {
-    id : user.id,
-    name : user.nombre,
-
-  }
+        if (req.body.recuerdame) {
+            res.cookie("user", { correo, nombre, id, avatar }, { maxAge: 1000 * 60 * 30 });
+        }
 
 
-        return res.redirect('/')
+        return res.redirect('/users/profile')
     },
     profile: (req, res, next) => {
+       
+       
 
+     res.render('users/profile')
     },
     logout: (req, res, next) => {
+
 
     },
     update: (req, res, next) => {
 
+ const users = parse(read(directory));
+ const id = req.params.id;
+ const user = users.find((user) => user.id === id);
+
+    req.body.id = id;
+    req.body.avatar = req.file ? req.file.filename : user.avatar;
+    
+    
+    if (req.body.contrasena && req.body.contrasena2) {
+      req.body.contrasena = bcrypt.hashSync(req.body.contrasena, 10);
+    } else {
+      req.body.contrasena = user.contrasena;
+    }
+
+    delete req.body.contrasena2;
+
+    const index = users.findIndex((user) => user.id === id);
+    users[index] = req.body;
+     
+    write(directory, string(users));
+    res.send(req.body);
+
     },
 
     admin: (req, res, next) => {
-        const read = (file = "") => {
-            return JSON.parse(fs.readFileSync(path.join(__dirname, file), 'utf-8'))
-        }
-        const products = read('../data/products.json');
+       
+        const products = parse(read(directory));
 
         const deportes = products.filter(producto => {
             return producto.categoria == "Deporte";
