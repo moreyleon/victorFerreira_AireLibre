@@ -168,5 +168,13 @@ li{
             
             font-size: 16px;
     }
+    .nav1 a{
+        font-size: 20px;
+        color: black;
+    }
+    .nav2 a{
+        font-size: 20px;
+        color: black;
+    }
 }
 

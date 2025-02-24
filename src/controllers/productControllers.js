@@ -69,7 +69,7 @@ update : (req,res,next) => {
     const {nombre, precio, descripcion, categoria} = req.body
 
     const modified = products.map(product => {
-        if(product.id === +req.params.id){
+        if(product.id.toString() === req.params.id){
             product.nombre = nombre.trim();
             product.precio = +precio;
             product.descripcion = descripcion.trim();
@@ -82,14 +82,15 @@ update : (req,res,next) => {
      return res.redirect('/product/list')
 },
 remove: (req,res,next) => {
-    const products = read(directorio);
+    const products = parse(read(directorio));
     const id = req.params.id;
-    const remove = products.filter(product => product.id != id);
-    write(directorio, remove);
-
-
+    const modified = products.filter(product => product.id != id);
     
+    write(directorio,string(modified));
+
 res.redirect('/product/list');
+    
+
 
 },
 

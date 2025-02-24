@@ -13,7 +13,7 @@ router.get('/login', login);
 router.post('/identity',validator,identity );
 router.get('/logout', logout);
 
-router.get('/profile',profile);
+router.get('/profile/:id', profile);
 router.put('/profile/:id', upload.single("avatar"), update);
 
 router.get('/admin', admin);
