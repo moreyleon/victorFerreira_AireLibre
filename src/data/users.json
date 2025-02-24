@@ -14,7 +14,7 @@
         "apellido": "Gómez",
         "correo": "maria.gomez@example.com",
         "contrasena": "contraseña456",
-        "categoria": "User",
+        "categoria": "user",
         "imagen": "https://example.com/images/maria.jpg"
     },
     {
@@ -23,7 +23,7 @@
         "apellido": "López",
         "correo": "carlos.lopez@example.com",
         "contrasena": "contraseña789",
-        "categoria": "User",
+        "categoria": "user",
         "imagen": "https://example.com/images/carlos.jpg"
     },
     {
@@ -32,14 +32,14 @@
         "apellido": "Martínez",
         "correo": "ana.martinez@example.com",
         "contrasena": "contraseña101",
-        "categoria": "Admin",
+        "categoria": "user",
         "imagen": "https://example.com/images/ana.jpg"
     },
     {
-        "id": "30011295-6e1a-469d-809a-4c9a50dfe7c2",
+        "id": "e772eee2-3ab5-4ed1-85f7-93bed82c2d8b",
         "nombre": "victor ",
         "apellido": "ferreira",
         "correo": "victor@hotmail.com",
-        "contrasena": "$2b$10$v4FSuFn3RO6OYQ831wPVBeT/l3.BTwslT7P6lnKJQc.OevdNLsoDq"
+        "contrasena": "$2b$10$oDOnZxFrCgTlZ3O8wNkE6uSECI4h/KPrO0bkzIojSXqk749QmWMf6"
     }
 ]
