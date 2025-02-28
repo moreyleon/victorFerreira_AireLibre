@@ -119,13 +119,19 @@ adventure :(req,res,next) => {
   res.render('products/aventura',{
      aventura
   });
+},
+  compra: (req,res,next)=>{
 
+
+    res.render('products/productCart');
+  },
+  
 
  
 }
  
 
-}
+
 
 
 module.exports = producto;

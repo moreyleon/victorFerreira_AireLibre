@@ -20,12 +20,14 @@ const fs = require('fs');
        agregados :agregados
     });
     
-  },
-  admin : (req, res, next) => {
-    res.render('admin');
   }
+ 
 
-}
+  }
+  
+  
+
+
 
 
 module.exports = home;
