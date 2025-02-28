@@ -36,10 +36,20 @@
         "imagen": "https://example.com/images/ana.jpg"
     },
     {
-        "id": "e772eee2-3ab5-4ed1-85f7-93bed82c2d8b",
+        "id": "684effe6-07a6-433d-88ee-2cd1272c347f",
         "nombre": "victor ",
         "apellido": "ferreira",
         "correo": "victor@hotmail.com",
-        "contrasena": "$2b$10$oDOnZxFrCgTlZ3O8wNkE6uSECI4h/KPrO0bkzIojSXqk749QmWMf6"
+        "contrasena": "$2b$10$luSYzLNjkARZO4HDq66j5.Agc6Sa6z5eV5p4RsT0/7XIVjLXHNQwe",
+        "categoria": "admin"
+    },
+    {
+        "id": "7fab8eae-bcf7-4976-bd1e-58000e3e51d1",
+        "nombre": "manuel",
+        "apellido": "torrez",
+        "correo": "loro@gmail.com",
+        "contrasena": "$2b$10$4t1VmYc6LWf7L51McT9Ugui1RpJ8d4gTeCmtKdCHnabBFDKS.Bvdu",
+        "categoria": "user"
     }
+  
 ]

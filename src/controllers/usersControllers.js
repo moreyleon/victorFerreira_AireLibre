@@ -5,6 +5,7 @@ const { v4: uuidv4 } = require("uuid");
 const bcrypt = require('bcrypt');
 
 
+
 const usuario = {
 
   register: (req, res, next) => {
@@ -12,10 +13,12 @@ const usuario = {
 
   },
   login: (req, res, next) => {
+   
     res.render('users/login');
   },
   processregister: (req, res, next) => {
-
+ 
+    
     const users = parse(read(directory));
 
     const { nombre, apellido, correo, contrasena, categoria } = req.body;
@@ -25,7 +28,6 @@ const usuario = {
       apellido,
       correo,
       contrasena:bcrypt.hashSync(contrasena, 10),
-      
       categoria
     };
 
@@ -39,24 +41,27 @@ const usuario = {
   identity: (req, res, next) => {
 
     const users = parse(read(directory));
-    const { contrasena, correo } = req.body
+    const {contrasena, correo} = req.body
     const user = users.find(user => user.correo === correo && bcrypt.compareSync(contrasena, user.contrasena))
+        console.log(req.body);
+
 
     if (!user) {
       return res.render('users/login', {
-        error: "Credenciales inválidas"
+        error: "Ingreso incorrecto"
       })
     }
 
     req.session.userLogin = {
-      id: user.id,
-      name: user.name,
-      rol: user.rol
+       user : user.id,
+        nombre : user.nombre,
+      
+        categoria : user.categoria
     }
+   
 
 
-
-    return res.redirect(`/users/profile/${user.id}`)
+    return res.redirect('/')
   },
   profile: (req, res, next) => {
 
@@ -65,7 +70,9 @@ const usuario = {
     res.render('users/profile')
   },
   logout: (req, res, next) => {
-
+    req.session.destroy();
+    res.clearCookie("user");
+    res.redirect("/users/login");
 
   },
   update: (req, res, next) => {
@@ -94,19 +101,11 @@ const usuario = {
 
   },
 
-  admin: (req, res, next) => {
-
-    const products = parse(read(directory));
-
-    const deportes = products.filter(producto => {
-      return producto.categoria == "Deporte";
-    })
-
-    const aventura = products.filter(producto => {
-      return producto.categoria == "Aventura";
-    })
-
-    res.render('users/admin');
+  admin : (req, res, next) => {
+    
+   
+ 
+  return res.render('users/admin')
 
   }
 
@@ -114,3 +113,13 @@ const usuario = {
 
 
 module.exports = usuario;
+
+// const products = parse(read(directory));
+
+    // const deportes = products.filter(producto => {
+    //   return producto.categoria == "Deporte";
+    // })
+
+    // const aventura = products.filter(producto => {
+    //   return producto.categoria == "Aventura";
+    // })
