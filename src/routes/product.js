@@ -2,15 +2,15 @@ var express = require('express');
 var router = express.Router();
 const {list,detail,create,add,edit,update,remove,sports,adventure,compra} = require('../controllers/productControllers');
 const session = require('../middleware/session');
-
+const image = require('../middleware/upImage');
 
 
 
 
 router.get('/list', list);
 
-router.get('/add' ,add);
-router.post('/create', create);
+router.get('/add' , add);
+router.post('/create',image.single('imagen'), create);
 
 router.get('/detail/:id' , detail);
 

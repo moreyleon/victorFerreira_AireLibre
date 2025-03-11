@@ -27,6 +27,11 @@
         <textarea name="descripcion" id="descripcion" rows="5"><%= descripcion %></textarea> 
     </div>
     <div class="form-group">
+        <label for="imagen">Imagen</label>
+        <input type="file" name="imagen" accept=".jpg, .jpeg, .png" value= "<%= user.imagen %>">
+        
+    </div>
+    <div class="form-group">
         <label for="precio">Precio</label>
         <input type="text" name="precio" value="<%= precio %>" >
     </div>

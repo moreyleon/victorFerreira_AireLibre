@@ -25,14 +25,15 @@ create: (req,res,next) => {
     
    const create = parse(read(directorio));
     
-    const {nombre, descripcion, categoria,precio} = req.body
+    const {nombre, descripcion, categoria,precio,imagen} = req.body
    
     create.push({
         id: uuidv4(),
         nombre,
         descripcion,
         categoria,
-        precio
+        precio,
+        imagen 
     });
     
 
