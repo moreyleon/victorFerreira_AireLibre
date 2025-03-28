@@ -1,8 +1,9 @@
-const { read, parse, write, string } = require("../data/filesystem")
-const path = require('path')
-const directory = path.join(__dirname, "../data/users.json");
+const { User } = require("../../database/models");
+
+
 const { v4: uuidv4 } = require("uuid");
 const bcrypt = require('bcrypt');
+
 
 
 
@@ -13,55 +14,67 @@ const usuario = {
 
   },
   login: (req, res, next) => {
-   
+
     res.render('users/login');
   },
-  processregister: (req, res, next) => {
- 
+  processregister: async (req, res, next) => {
     
-    const users = parse(read(directory));
-
-    const { nombre, apellido, correo, contrasena, categoria } = req.body;
-    const newuser = {
-      id: uuidv4(),
-      nombre,
-      apellido,
-      correo,
-      contrasena:bcrypt.hashSync(contrasena, 10),
-      categoria
-    };
-
-    users.push(newuser)
-    write(directory,string(users));
-
-    return res.redirect('/users/login');
+    try {
+     
+      const { name, surname, mail, password } = req.body;
+     console.log(req.body);
+     
+      await User.create({
+        name,
+        surname,
+        mail, 
+        password: bcrypt.hashSync(password,10),
+        rolId: 2,
+      });
 
 
+
+      return res.redirect('/users/login');
+
+    } catch (error) {
+      next(error);
+  
+    }
+    
   },
-  identity: (req, res, next) => {
-
-    const users = parse(read(directory));
-    const {contrasena, correo} = req.body
-    const user = users.find(user => user.correo === correo && bcrypt.compareSync(contrasena, user.contrasena))
-        console.log(req.body);
+  identity: async (req, res, next) => {
 
 
-    if (!user) {
-      return res.render('users/login', {
-        error: "Ingreso incorrecto"
-      })
-    }
+const { mail, password, recordar } = req.body; 
 
-    req.session.userLogin = {
-       user : user.id,
-        nombre : user.nombre,
-      
-        categoria : user.categoria
-    }
-   
+try {
+  
+  const user = await User.findOne({ where: { mail } });
 
 
-    return res.redirect('/')
+  if (!user) {
+    return res.render("users/login", { error: "El usuario no existe" });
+  }
+
+
+  const compararContrasena = bcrypt.compareSync(password, user.password);
+  if (!compararContrasena) {
+    return res.render("users/login", { error: "Contraseña incorrecta" });
+  }
+
+  
+  req.session.user = { id: user.id, name: user.name, mail: user.mail };
+
+  if (recordar) {
+    res.cookie("user", req.session.user, { maxAge: 1000 * 60 * 60 }); 
+  }
+
+  return res.redirect("/");
+
+} catch (error) {
+  console.error("Error en login:", error);
+  return res.render("error", { message: "Error en el login", error });
+}
   },
   profile: (req, res, next) => {
 
@@ -101,11 +114,11 @@ const usuario = {
 
   },
 
-  admin : (req, res, next) => {
-    
-   
- 
-  return res.render('users/admin')
+  admin: (req, res, next) => {
+
+
+
+    return res.render('users/admin')
 
   }
 
@@ -116,10 +129,10 @@ module.exports = usuario;
 
 // const products = parse(read(directory));
 
-    // const deportes = products.filter(producto => {
-    //   return producto.categoria == "Deporte";
-    // })
+// const deportes = products.filter(producto => {
+//   return producto.categoria == "Deporte";
+// })
 
-    // const aventura = products.filter(producto => {
-    //   return producto.categoria == "Aventura";
-    // })
+// const aventura = products.filter(producto => {
+//   return producto.categoria == "Aventura";
+// })

@@ -7,16 +7,16 @@
   <h1>Sector Aventura/Aire Libre</h1>
   
   <section class="producto deportes aventura">
-    <% aventura.forEach((product)=> { %>
+    <% adventure.forEach((product)=> { %>
       <article class="articulo detalle">
 
         <a href="/product/detail/<%=product.id%>">
-          <img src="/images/<%= product.imagen %>" alt=""></a>
+          <img src="/images/<%= product.image %>" alt=""></a>
         <p>
-          <%=product.nombre %>
+          <%=product.name %>
         </p>
         <p>$
-          <%=product.precio %>
+          <%=product.price %>
         </p>
       </article>
       <% }) %>

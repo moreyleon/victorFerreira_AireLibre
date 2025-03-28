@@ -23,16 +23,17 @@
         <h2 class="oferta">Ofertas</h2>
 
         <section class="producto">
-          <% ofertas.find((product)=> { %>
+          <% offers.forEach((product)=> { %>
             <article class="articulo detalle">
 
               <a href="/product/detail/<%= product.id %>">
-                <img src="/images/<%=product.imagen %>" alt=""></a>
+                
+                <img src="/images/<%=product.image %>" alt=""></a>
              
-                <p> <%= product.nombre %></p>
+                <p> <%= product.name %></p>
               
               
-               <p>$ <%= product.precio %> </p>
+               <p>$ <%= product.price %> </p>
              
             </article>
             <% }) %>
@@ -41,15 +42,15 @@
         <h2>Nuevos Lanzamientos</h2>
 
         <section class="producto">
-          <% agregados.find((product)=> { %>
+          <% news.forEach((product)=> { %>
             <article class="articulo detalle">
 
               <a href="/product/detail/<%= product.id %>">
-                <img src="/images/<%= product.imagen %>" alt=""></a>
+                <img src="/images/<%= product.image %>" alt=""></a>
               <p>
-                <%= product.nombre %>
+                <%= product.name %>
               </p>
-              <p>$<%= product.precio %>  </p>
+              <p>$<%= product.price %>  </p>
               
             </article>
             <% }) %>

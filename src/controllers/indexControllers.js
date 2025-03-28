@@ -1,31 +1,41 @@
-const path = require('path');
-const fs = require('fs');
 
-  const home ={
 
-  index : (req, res ,next) => {
-    const read = (file = "") => {
-      return JSON.parse(fs.readFileSync(path.join(__dirname,file),'utf-8'))
-  }
-    const products = read('../data/products.json');
+const db = require('../../database/models');
 
-    const ofertas = products.filter(producto => {
-      return producto.ofertas == "Ofertas" ;})
+const home = {
 
-      const agregados = products.filter(producto => {
-        return producto.agregados == "Agregados" ;})
+  index: async (req, res, next) => {
 
-    res.render('index',{
-        ofertas :ofertas,
-       agregados :agregados
+    try {
+
+      const offers = await db.Product.findAll( {
+
+where:{ offers: "offers"}
+
+       
+
+      })
+      
+    const news = await db.Product.findAll({
+    where:{ news: "news"}
+
+   
+    })
+  
+  
+    return res.render('index', {
+      offers,
+      news
     });
-    
-  }
- 
+
+  } catch(error) {
+    console.log(error);
+
 
   }
-  
-  
+
+}
+}
 
 
 
