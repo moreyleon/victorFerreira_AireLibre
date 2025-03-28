@@ -1,55 +1,55 @@
 [
     {
-        "id": 1,
-        "nombre": "Juan",
-        "apellido": "Pérez",
-        "correo": "juan.perez@example.com",
-        "contrasena": "contraseña123",
-        "categoria": "Admin",
-        "imagen": "https://example.com/images/juan.jpg"
+        
+        "name": "Juan",
+        "surname": "Pérez",
+        "mail": "juan.perez@example.com",
+        "password": "contraseña123",
+        "rolId": 1,
+        "image": "https://example.com/images/juan.jpg"
     },
     {
-        "id": 2,
-        "nombre": "María",
-        "apellido": "Gómez",
-        "correo": "maria.gomez@example.com",
-        "contrasena": "contraseña456",
-        "categoria": "user",
-        "imagen": "https://example.com/images/maria.jpg"
+    
+        "name": "María",
+        "surname": "Gómez",
+        "mail": "maria.gomez@example.com",
+        "password": "contraseña456",
+        "rolId": 2,
+        "image": "https://example.com/images/maria.jpg"
     },
     {
-        "id": 3,
-        "nombre": "Carlos",
-        "apellido": "López",
-        "correo": "carlos.lopez@example.com",
-        "contrasena": "contraseña789",
-        "categoria": "user",
-        "imagen": "https://example.com/images/carlos.jpg"
+        
+        "name": "Carlos",
+        "surname": "López",
+        "mail": "carlos.lopez@example.com",
+        "password": "contraseña789",
+        "rolId": 2,
+        "image": "https://example.com/images/carlos.jpg"
     },
     {
-        "id": 4,
-        "nombre": "Ana",
-        "apellido": "Martínez",
-        "correo": "ana.martinez@example.com",
-        "contrasena": "contraseña101",
-        "categoria": "user",
-        "imagen": "https://example.com/images/ana.jpg"
+        
+        "name": "Ana",
+        "surname": "Martínez",
+        "mail": "ana.martinez@example.com",
+        "password": "contraseña101",
+        "rolId": 2,
+        "image": "https://example.com/images/ana.jpg"
     },
     {
-        "id": "684effe6-07a6-433d-88ee-2cd1272c347f",
-        "nombre": "victor ",
-        "apellido": "ferreira",
-        "correo": "victor@hotmail.com",
-        "contrasena": "$2b$10$luSYzLNjkARZO4HDq66j5.Agc6Sa6z5eV5p4RsT0/7XIVjLXHNQwe",
-        "categoria": "admin"
-    },
+        
+        "name": "victor ",
+        "surname": "ferreira",
+        "mail": "victor@hotmail.com",
+        "password": "$2b$10$luSYzLNjkARZO4HDq66j5.Agc6Sa6z5eV5p4RsT0/7XIVjLXHNQwe",
+        "rolId": 1
+},
     {
-        "id": "7fab8eae-bcf7-4976-bd1e-58000e3e51d1",
-        "nombre": "manuel",
-        "apellido": "torrez",
-        "correo": "loro@gmail.com",
-        "contrasena": "$2b$10$4t1VmYc6LWf7L51McT9Ugui1RpJ8d4gTeCmtKdCHnabBFDKS.Bvdu",
-        "categoria": "user"
-    }
+    
+        "name": "manuel",
+        "surname": "torrez",
+        "mail": "loro@gmail.com",
+        "password": "$2b$10$4t1VmYc6LWf7L51McT9Ugui1RpJ8d4gTeCmtKdCHnabBFDKS.Bvdu",
+        "rolId": 2
+ }
   
 ]

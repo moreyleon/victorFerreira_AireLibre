@@ -1,76 +1,84 @@
-const fs = require('fs')
-const  {read,parse,write,string} = require ("../data/filesystem")
-const path = require('path')
-const directorio = path.join(__dirname,'../data/products.json');
+
+const db = require('../../database/models');
+
+
 
 const { v4: uuidv4 } = require("uuid");
 
 
 const producto = {
 
-list : (req, res,next) => {
+    list: (req, res, next) => {
 
-   const products = parse(read(directorio));
-   return res.render('products/productsList',{
-    products
-});
+        res.render('products/productsList', { products: db.Product });
+
+
+    },
+
+    add: (req, res, next) => {
+
+
+        res.render('products/productAdd');
+    },
+
+    create: (req, res, next) => {
+
+        const create = parse(read(directorio));
+
+        const { nombre, descripcion, categoria, precio, imagen } = req.body
+
+        create.push({
+            id: uuidv4(),
+            nombre,
+            descripcion,
+            categoria,
+            precio,
+            imagen
+        });
+
+
+        write(directorio, string(create));
+
+        return res.redirect('/product/list')
+
+    },
+
+    detail: async (req, res, next) => {
+
+        try {
+            const product = await db.Product.findOne({
+
+                where: { id: req.params.id }
+
+            });
+        
+      return res.render('products/productDetail', { product })
+
+    } catch(error) {
+
+    }
+
 
 },
 
-add: (req,res,next) => {
-res.render('products/productAdd');
-},
+    edit: (req, res, next) => {
+        const id = req.params.id;
+const products = parse(read(directorio));
+const product = products.find(product => product.id == id);
 
-create: (req,res,next) => {
-    
-   const create = parse(read(directorio));
-    
-    const {nombre, descripcion, categoria,precio,imagen} = req.body
-   
-    create.push({
-        id: uuidv4(),
-        nombre,
-        descripcion,
-        categoria,
-        precio,
-        imagen 
-    });
-    
 
-    write(directorio,string(create));
 
-     return res.redirect('/product/list')
-    
-},
-
-detail : (req, res,next) => {
-    const products = parse(read(directorio));
-   const product = products.find(product => product.id === +req.params.id);
-   
-return res.render('products/productDetail',{
-        ...product
-    })
-
-},
-
-edit: (req,res,next) => {
-    const id = req.params.id;
-    const products = parse(read(directorio));
-    const product = products.find(product => product.id == id);
-    
-    
-
-res.render('products/productEdit',{
+res.render('products/productEdit', {
     ...product
 })
-     
-},
-update : (req,res,next) => {
-    const products =parse(read(directorio));
-    const {nombre, precio, descripcion, categoria} = req.body
+
+    },
+update: (req, res, next) => {
+    const products = parse(read(directorio));
+    const { nombre, precio, descripcion, categoria } = req.body
 
     const modified = products.map(product => {
-        if(product.id.toString() === req.params.id){
+        if (product.id.toString() === req.params.id) {
             product.nombre = nombre.trim();
             product.precio = +precio;
             product.descripcion = descripcion.trim();
@@ -78,59 +86,67 @@ update : (req,res,next) => {
         }
         return product
     })
-    write(directorio,string(modified));
+    write(directorio, string(modified));
 
-     return res.redirect('/product/list')
+    return res.redirect('/product/list')
 },
-remove: (req,res,next) => {
-    const products = parse(read(directorio));
-    const id = req.params.id;
-    const modified = products.filter(product => product.id != id);
-    
-    write(directorio,string(modified));
+    remove: (req, res, next) => {
+        const products = parse(read(directorio));
+        const id = req.params.id;
+        const modified = products.filter(product => product.id != id);
 
-res.redirect('/product/list');
-    
+        write(directorio, string(modified));
 
-
-},
-
-sports :(req,res,next) => {
-    
-     const products = parse(read(directorio));
-
-     const deportes = products.filter(producto => {
-        return producto.categoria == "Deporte" ;})
+        res.redirect('/product/list');
 
 
-    res.render('products/deportes',{
-       deportes
-    });
 
-},
-adventure :(req,res,next) => {
+    },
 
-    const products = parse(read(directorio));
-   
+        sports: async (req, res, next) => {
+            try {
 
-   const aventura = products.filter(producto => {
-      return producto.categoria == "Aventura" ;})
+                const sports = await db.Product.findAll({
+                    where: { categoryId: 1 }
+                })
+                return res.render('products/sports', {
+                    sports
+                });
 
+            } catch (error) {
+                console.log(error);
 
-  res.render('products/aventura',{
-     aventura
-  });
-},
-  compra: (req,res,next)=>{
+            }
 
 
-    res.render('products/productCart');
-  },
-  
 
- 
+        },
+            adventure: async (req, res, next) => {
+                try {
+
+                    const adventure = await db.Product.findAll({
+                        where: { categoryId: 2 }
+                    })
+                    return res.render('products/adventure', {
+                        adventure
+                    });
+
+                } catch (error) {
+                    console.log(error);
+
+                }
+
+            },
+                compra: (req, res, next) => {
+
+
+                    res.render('products/productCart');
+                },
+
+
+
 }
- 
+
 
 
 
