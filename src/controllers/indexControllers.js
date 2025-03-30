@@ -35,6 +35,7 @@ where:{ offers: "offers"}
   }
 
 }
+
 }
 
 

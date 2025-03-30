@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const {register,login,processregister,identity,profile,update,logout,admin} = require('../controllers/usersControllers');
-
 const checkadmin = require('../data/checkadmin');
 
 

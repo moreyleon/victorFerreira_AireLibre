@@ -11,19 +11,23 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       description: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
+        allowNull: false,
       },
       price: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       size: {
         type: Sequelize.INTEGER
       },
       image: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       news: {
         type: Sequelize.STRING
@@ -33,6 +37,7 @@ module.exports = {
       },
       categoryId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
           model: {
             tableName:'Categories',

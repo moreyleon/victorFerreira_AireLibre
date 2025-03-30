@@ -1,4 +1,4 @@
- <%- include('../partials/head',{title:"Registro"}) %>
+<%- include('../partials/head',{title:"Registro"}) %>
 
     <body>
         <header class="header">
@@ -10,7 +10,7 @@
             <a href="/">
             <button class="volver">Volver</button>
             </a>
-            <form action="/users/process" method="POST">
+            <form action="/users/update/<%= users.id %>?_method=PUT " method="POST">
                 <div class="form-group">
                     <label for="name">Nombre</label>
                     <input type="text" name="name" required>
@@ -36,9 +36,15 @@
                 </div>
                 
               <div class="registrarse">
-                <button type="submit"> Registrarse</button>
+                <button type="submit"> Editar Usuario</button>
             </div>
             </form>
+            <div class="boton_remove">
+                <form action="/users/remove/<%= users.id %>?_method=DELETE" method="POST">
+                <button type="submit">Eliminar Usuario</button>
+        </form>
+        
+            </div>
            
         </main>
         <%- include('../partials/footer') %>
