@@ -3,6 +3,8 @@ const { User } = require("../../database/models");
 
 const { v4: uuidv4 } = require("uuid");
 const bcrypt = require('bcrypt');
+const { where } = require("sequelize");
+
 
 
 
@@ -20,10 +22,10 @@ const usuario = {
   processregister: async (req, res, next) => {
     
     try {
+   
      
-      const { name, surname, mail, password } = req.body;
-     console.log(req.body);
-     
+     const { mail,name, surname, password } = req.body;
+
       await User.create({
         name,
         surname,
@@ -40,8 +42,8 @@ const usuario = {
       next(error);
   
     }
-    
-  },
+},
+  
   identity: async (req, res, next) => {
 
 
@@ -63,7 +65,7 @@ try {
   }
 
   
-  req.session.user = { id: user.id, name: user.name, mail: user.mail };
+  req.session.userLogin = { id: user.id, name: user.name, mail: user.mail, rolId: user.rolId };
 
   if (recordar) {
     res.cookie("user", req.session.user, { maxAge: 1000 * 60 * 60 }); 
@@ -88,35 +90,41 @@ try {
     res.redirect("/users/login");
 
   },
-  update: (req, res, next) => {
+  update: async (req, res, next) => {
 
-    const users = parse(read(directory));
+    
     const id = req.params.id;
-    const user = users.find((user) => user.id === id);
-
-    req.body.id = id;
-    req.body.avatar = req.file ? req.file.filename : user.avatar;
-
+    const { name, surname,mail,password } = req.body
+try{
+    await User.update({
+      name,
+      surname,
+      mail,
+      password
+    },{
+      where:{id},
+    })
 
     if (req.body.contrasena && req.body.contrasena2) {
       req.body.contrasena = bcrypt.hashSync(req.body.contrasena, 10);
     } else {
-      req.body.contrasena = user.contrasena;
+      req.body.contrasena = User.contrasena;
     }
+ 
+    return res.redirect('/')
 
-    delete req.body.contrasena2;
+   
+  }catch(error){
 
-    const index = users.findIndex((user) => user.id === id);
-    users[index] = req.body;
-
-    write(directory, string(users));
-    res.send(req.body);
+  }
 
   },
 
+
+
   admin: (req, res, next) => {
 
-
+     
 
     return res.render('users/admin')
 
@@ -127,12 +135,3 @@ try {
 
 module.exports = usuario;
 
-// const products = parse(read(directory));
-
-// const deportes = products.filter(producto => {
-//   return producto.categoria == "Deporte";
-// })
-
-// const aventura = products.filter(producto => {
-//   return producto.categoria == "Aventura";
-// })

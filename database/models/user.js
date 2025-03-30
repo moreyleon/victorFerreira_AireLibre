@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'User',
     timestamps: true,
-    underscored: true,
+    underscored: false
   });
   return User;
 };

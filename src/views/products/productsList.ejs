@@ -27,26 +27,25 @@
         <tr>
         <th>#</th>
         <th>Categoria</th>
-         <th>Nombre</th>
-        <th>Precio</th>
+         <th>Precio</th>
+        
       </tr>
       </thead>
         
          <tbody> 
           
-            <% products.forEach(({id, categoria, nombre, precio})=> { %>
+            <% products.forEach(({ id,categoryId, name, price})=> { %>
             <tr>
              
-              <th><%= id %></th>
               <th>
-                <%=categoria %>
+                <%= categoryId %>
               </th>
               <th><a href="/product/edit/<%= id %>">
-                <%=nombre %>
+                <%= name %>
               </a>
               </th>
               <th>
-                <%=precio %>
+                <%= price %>
               </th>
        
       </tr>
