@@ -1,17 +1,17 @@
-<%- include('../partials/head',{title:'Aventura'}) %>
+<%- include('../partials/head',{title: category.name }) %>
 
 <%- include('../partials/header') %>
 
 <main>
 
-  <h1>Sector Aventura/Aire Libre</h1>
+  <h1>Sector <%= category.name %></h1>
   
   <section class="producto deportes aventura">
-    <% adventure.forEach((product)=> { %>
+    <% category.products.forEach((product)=> { %>
       <article class="articulo detalle">
 
         <a href="/product/detail/<%=product.id%>">
-          <img src="/images/<%= product.image %>" alt=""></a>
+          <img src="/images/products/<%= product.image %>" alt=""></a>
         <p>
           <%=product.name %>
         </p>
