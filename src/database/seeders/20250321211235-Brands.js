@@ -1,7 +1,7 @@
 'use strict';
 
 
-const brandsJson = require("../../src/brands.json")
+const brandsJson = require("../../data/brands.json")
 
 
 const brands = brandsJson.map(({ name }) => {

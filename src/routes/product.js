@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {list,detail,create,add,edit,update,remove,sports,adventure} = require('../controllers/productControllers');
+const {list,detail,create,add,edit,update,remove,sports,adventure, filter} = require('../controllers/productControllers');
 
 const image = require('../middleware/upImage');
 
@@ -16,13 +16,10 @@ router.post('/create',image.single('image'), create);
 router.get('/detail/:id' , detail);
 
 router.get('/edit/:id' ,edit);
-router.put('/update/:id' ,update);
+router.put('/update/:id', image.single('image') ,update);
 
 router.delete('/remove/:id' ,remove) ;
 
-
-router.get('/sports', sports);
-router.get('/adventure', adventure);
-
+router.get('/category', filter);
 
 module.exports = router;

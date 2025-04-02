@@ -1,4 +1,4 @@
-const { User } = require("../../database/models");
+const { User } = require("../database/models");
 
 
 const { v4: uuidv4 } = require("uuid");

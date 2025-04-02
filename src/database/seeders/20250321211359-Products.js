@@ -1,6 +1,6 @@
 'use strict';
 
-const productsJson = require('../../src/products.json');
+const productsJson = require('../../data/products.json');
 const products = productsJson.map(({ name, description, price,image,offers,news,categoryId,brandId,size }) => {
   return {
     name,
