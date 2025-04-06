@@ -19,18 +19,21 @@
                    
                     <div class="form-login">
                         <label for="mail">Correo electronico</label>
-                        <input type="text" name="mail">
+                        <input type="text" name="mail" required value="<%= locals.mail ? mail : ""%>">
                         
                     </div> 
                      <div class="form-login">
                         <label for="password">Contraseña</label>
-                        <input type="password" name="password">
+                        <input type="password" name="password" value="<%= locals.password ? password : ""%>">
                        
                     </div>
+                       <% if(locals.errores) {%>
+                            <p> Credenciales invalidas</p>
+                        <% } %>
                          <div>
                         <button  class="ingresar" type="submit">Ingresar</button>
                         </div>
-
+                     
                          <div class="session">
                             <input type="checkbox" name="recordar">
                             <label for="recordar" name="recordar" >Desea recordar su session?</label>

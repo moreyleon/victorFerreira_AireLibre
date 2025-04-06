@@ -2,14 +2,16 @@ var express = require('express');
 var router = express.Router();
 const {register,login,processregister,identity,profile,update,logout,admin} = require('../controllers/usersControllers');
 const checkadmin = require('../data/checkadmin');
+const validator = require('../middleware/validator')
+const validateLogin = require('../middleware/validateLogin');
 
 
 router.get('/register' , register);
-router.post('/process', processregister)
+router.post('/process',validator, processregister)
 
 
 router.get('/login', login);
-router.post('/identity',identity);
+router.post('/identity',validateLogin,identity);
 router.get('/logout', logout);
 
 router.get('/profile/:id', profile);
