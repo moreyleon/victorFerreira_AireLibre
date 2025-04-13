@@ -1,5 +1,5 @@
 const multer = require("multer");
-const { v4: uuidv4 } = require("uuid");
+
 const path = require("path");
 
 const storage = multer.diskStorage({
@@ -8,20 +8,21 @@ const storage = multer.diskStorage({
   },
   
   filename: function (req, file, cb) {
-    const uniqueSuffix = path.basename(file.originalname, path.extname(file.originalname)) + "-" + Date.now() + "-" + uuidv4() + path.extname(file.originalname);
+     const uniqueSuffix = path.basename(file.originalname, path.extname(file.originalname)) + "-" + Date.now() + path.extname(file.originalname) ;
     cb(null, uniqueSuffix);
-  },
+   }
 }); 
 
 const fileFilter = (req, file, cb) => {
 
   const filtro = /\.(jpg|jpeg|png)$/;
-  if (filtro.test(file.originalname)) {
+
+  if (filtro.test(file.originalname.toLowerCase())) {
     
     cb(null, true);
   } else {
     
-    cb(null, false);
+    cb(new Error('Formato de archivo no permitido. Solo se permiten JPG, JPEG y PNG.'));
   }
 };
 

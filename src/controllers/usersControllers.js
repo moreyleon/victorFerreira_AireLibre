@@ -1,9 +1,9 @@
 const { User } = require("../database/models");
 
 const { validationResult } = require("express-validator");
-const { v4: uuidv4 } = require("uuid");
+
 const bcrypt = require('bcrypt');
-const { where } = require("sequelize");
+
 
 
 
@@ -25,6 +25,8 @@ const usuario = {
      const { mail,name, surname, password } = req.body;
      const errores = validationResult(req);
 
+
+     
      if (errores.array().length > 0) {
       res.render("users/register", {
         errores: errores.mapped(),
@@ -50,7 +52,7 @@ const usuario = {
  return res.redirect('/users/login');
 
     })
-  }
+    }
 
     } catch (error) {
       next(error);
