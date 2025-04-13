@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const {list,detail,create,add,edit,update,remove,sports,adventure, filter} = require('../controllers/productControllers');
-
+const {list,detail,create,add,edit,update,remove,filter} = require('../controllers/productControllers');
+const createValidator = require('../middleware/create')
 const image = require('../middleware/upImage');
 
 
@@ -9,9 +9,9 @@ const image = require('../middleware/upImage');
 
 
 router.get('/list', list);
-
+ 
 router.get('/add' , add);
-router.post('/create',image.single('image'), create);
+router.post('/create', image.single('image'),createValidator, create);
 
 router.get('/detail/:id' , detail);
 

@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node  ./src/bin/www",
-    "dev": "node --env-file=.env --watch ./src/bin/www",
+    "start": "node --env-file=.env --watch ./src/bin/www",
+    
     "dbreset": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
     "dbinit": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
   },

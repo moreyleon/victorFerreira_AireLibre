@@ -1,4 +1,6 @@
 const { Product, Category, Brand } = require("../database/models");
+const { validationResult } = require("express-validator");
+
 
 const producto = {
   list: async (req, res, next) => {
@@ -31,17 +33,40 @@ const producto = {
   },
 
   create: async (req, res, next) => {
-    try {
-      const { name, description, categoryId, brandId, price } = req.body;
-      await Product.create({
+    
+    try{
+    const { name, description, categoryId, brandId, price} = req.body;
+      const errores = validationResult(req);
+      
+        if (errores.array().length > 0 && !req.file) {
+      
+       const brands = await Brand.findAll(); 
+       const categories = await Category.findAll();
+       
+        res.render("products/productAdd",{
+          errores:errores.mapped(),
+          name,
+          description,
+          categoryId,
+          brandId,
+          price,
+          brands,
+          categories,
+          }); 
+       
+
+       }
+       await Product.create({
         name,
         description,
         categoryId,
         brandId,
         price,
-        image : req.file ? req.file.filename : null,
-      });
+        image : req.file.filename 
 
+      });
+       console.log('ERRORES DE CREATE:',errores.mapped());
+        
       return res.redirect("/product/list");
     } catch (error) {
       next(error);
