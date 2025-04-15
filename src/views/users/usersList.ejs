@@ -6,9 +6,9 @@
       <nav>
 
         <ul>
-          <li><a href="/product/add ">Agregar</a></li>
+          <li><a href="/users/register">Agregar</a></li>
 
-          <li><a href="/product/list">Lista de productos</a></li>
+          <li><a href="/users/list">Lista de usuarios</a></li>
         </ul>
       </nav>
       <a href="/">
@@ -18,24 +18,25 @@
     </header>
 
     <main>
-      <h1>Productos</h1>
+      <h1>Usuarios</h1>
 
-      <h2>Lista de productos</h2>
+    
       <table>
         <thead>
           <tr>
             <th>#</th>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Marca</th>
-            <th>Categoría</th>
-
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Contraseña</th>
+            <th>Rol</th>
+            <th>Imagen</th>
           </tr>
         </thead>
 
         <tbody>
 
-          <% products.forEach(({ id,category, brand, name, price})=> { %>
+          <% user.forEach(({ id,surname,password, mail, name,image, rolId})=> { %>
 
             <tr>
 
@@ -44,27 +45,30 @@
                 <%= id %>
               </th>
 
-              <th><a href="/product/edit/<%= id %>">
+              <th>
                   <%= name %>
-                </a>
-
-              </th>
-              <th>
-                <%= price %>
-              </th>
-              <th>
-                <%= brand.name %>
-              </th>
-              <th>
-                <%= category.name %>
-
               </th>
 
+              <th>
+                <%= surname %>
+              </th>
+              <th>
+                <%= mail %>
+              </th>
+              <th>
+                <%= password %>
+              </th>
+              <th>
+                <%= rolId %>
+              </th>
+              <th>
+                <%= image %>
+              </th>
             </tr>
             
               <th>
                 
-                  <a href="/product/edit/<%= id %>">
+                  <a href="/users/edit/<%= id %>">
                     <button type="submit" class="btnedit"> Editar</button>
                   </a>
                 
@@ -72,7 +76,7 @@
             
               <th>
                 
-                  <a href="/product/edit/<%= id %>">
+                  <a href="/users/edit/<%= id %>">
                     <button type="submit" class="btnremove">Eliminar</button>
                   </a>
                 

@@ -136,7 +136,7 @@ const producto = {
     const { id } = req.params;
     try {
       await Product.destroy({ where: { id } });
-
+      
       return res.redirect("/product/list");
     } catch (error) {
       console.log(error);

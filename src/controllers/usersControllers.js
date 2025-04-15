@@ -3,6 +3,7 @@ const { User } = require("../database/models");
 const { validationResult } = require("express-validator");
 
 const bcrypt = require('bcrypt');
+const { edit } = require("./productControllers");
 
 
 
@@ -105,6 +106,25 @@ const user = await User.findOne({ where: { mail } });
 
     res.render('users/profile')
   },
+  edit:async (req, res, next) => {
+    const { id } = req.params;
+    
+    try {
+      const user = await User.findByPk(id, {
+        include: [{ association: "rol" }],
+      });
+       
+      if (!user) {
+        return res.status(404).send("Usuario no encontrado");
+      }
+
+      return res.render("users/usersEdit",{user});
+        
+      
+    } catch (error) {
+      console.log(error);
+    }
+  },
   logout: (req, res, next) => {
     req.session.destroy();
     res.clearCookie("user");
@@ -117,6 +137,11 @@ const user = await User.findOne({ where: { mail } });
     const id = req.params.id;
     const { name, surname,mail,password } = req.body
 try{
+const user = await User.findByPk(id)
+
+if(!user){
+  return res.status(404).send("Usuario no encontrado")
+}
     await User.update({
       name,
       surname,
@@ -126,13 +151,13 @@ try{
       where:{id},
     })
 
-    if (req.body.contrasena && req.body.contrasena2) {
-      req.body.contrasena = bcrypt.hashSync(req.body.contrasena, 10);
+    if (req.body.password && req.body.password2) {
+      req.body.password = bcrypt.hashSync(req.body.password, 10);
     } else {
-      req.body.contrasena = User.contrasena;
+      req.body.password = User.password;
     }
  
-    return res.redirect('/')
+    return res.redirect('/users/list')
 
    
   }catch(error){
@@ -140,9 +165,28 @@ try{
   }
 
   },
+list:(req, res, next) => {
+    User.findAll()
+    .then(user => {
+      return res.render('users/usersList', { user })
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  },
+  remove: async (req, res, next) => {
+    const { id } = req.params;
+    try {
+      await User.destroy({ where: { id } });
 
+      return res.redirect("/users/list");
+    } catch (error) {
+      console.log(error);
+      {
+      }
+    }
 
-
+  },
   admin: (req, res, next) => {
 
      
