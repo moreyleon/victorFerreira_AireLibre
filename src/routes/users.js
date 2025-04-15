@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {register,login,processregister,identity,profile,update,logout,admin} = require('../controllers/usersControllers');
+const {register,login,processregister,identity,profile,update,logout,edit,list,remove,admin} = require('../controllers/usersControllers');
 const checkadmin = require('../data/checkadmin');
 const validator = require('../middleware/validator')
 const validateLogin = require('../middleware/validateLogin');
@@ -14,8 +14,11 @@ router.get('/login', login);
 router.post('/identity',validateLogin,identity);
 router.get('/logout', logout);
 
-router.get('/profile/:id', profile);
-router.put('/profile/:id', update);
+router.get('/edit/:id', edit);
+router.put('/update/:id', edit);
+
+router.get('/list', list);
+router.delete('/remove/:id' ,remove) ;
 
 router.get('/admin',checkadmin,admin);
 

@@ -54,8 +54,23 @@ align-content: flex-start;
 align-items: center;
 }
 
-
-
+.btnedit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    background: linear-gradient(#5dc9b6, #A50034);
+}
+.btnremove{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #A50034;
+}
     
 
 }
