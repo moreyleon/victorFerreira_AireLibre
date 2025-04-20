@@ -7,8 +7,8 @@
 
         <ul>
           <li><a href="/users/register">Agregar</a></li>
+          <li><a href="/users/admin">Administrador</a></li>
 
-          <li><a href="/users/list">Lista de usuarios</a></li>
         </ul>
       </nav>
       <a href="/">
@@ -20,7 +20,7 @@
     <main>
       <h1>Usuarios</h1>
 
-    
+
       <table>
         <thead>
           <tr>
@@ -46,7 +46,7 @@
               </th>
 
               <th>
-                  <%= name %>
+                <%= name %>
               </th>
 
               <th>
@@ -66,22 +66,21 @@
               </th>
             </tr>
             
-              <th>
-                
-                  <a href="/users/edit/<%= id %>">
-                    <button type="submit" class="btnedit"> Editar</button>
-                  </a>
-                
-              </th>
-            
-              <th>
-                
-                  <a href="/users/edit/<%= id %>">
-                    <button type="submit" class="btnremove">Eliminar</button>
-                  </a>
-                
-              </th>
-            
+<tr>
+            <th>
+              <a href="/users/edit/<%= id %>">
+                <button type="submit" class="btnedit"> Editar</button>
+              </a>
+</tr>
+<tr>
+            </th>
+            <th>
+              <a href="/users/edit/<%= id %>">
+                <button type="submit" class="btnremove">Eliminar</button>
+              </a>
+
+            </th>
+</tr>
             <% }) %>
 
         </tbody>

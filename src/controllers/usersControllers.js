@@ -1,9 +1,8 @@
-const { User } = require("../database/models");
+const { User,Rol } = require("../database/models");
 
 const { validationResult } = require("express-validator");
 
 const bcrypt = require('bcrypt');
-const { edit } = require("./productControllers");
 
 
 
@@ -110,15 +109,18 @@ const user = await User.findOne({ where: { mail } });
     const { id } = req.params;
     
     try {
-      const user = await User.findByPk(id, {
-        include: [{ association: "rol" }],
-      });
-       
+      const [user,rol] = await Promise.all([
+          User.findOne({ where:{id}}),
+          Rol.findAll()
+      ])
+
       if (!user) {
         return res.status(404).send("Usuario no encontrado");
       }
-
-      return res.render("users/usersEdit",{user});
+      
+      return res.render("users/usersEdit",{
+        user,
+        rol});
         
       
     } catch (error) {
