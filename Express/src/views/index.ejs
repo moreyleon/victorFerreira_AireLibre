@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Aire Libre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://kit.fontawesome.com/e30d44e91a.js" crossorigin="anonymous"></script>
+  <scrip src="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
+    rel="stylesheet">
+    </script>
+</head>
+
+<body>
+  <%- include('partials/header') %>
+
+    <div>
+      <div class="banner" id="tablet">
+        <img src="/images/Deportes-al-aire-libre-para-mantenerse-en-forma.jpg" alt="">
+      </div>
+      <main>
+
+        <h2 class="oferta">Ofertas</h2>
+
+        <section class="producto">
+          <% offers.forEach((product)=> { %>
+            <article class="articulo detalle">
+
+              <a href="/product/detail/<%= product.id %>">
+                
+                <img src="/images/products/<%=product.image %>" alt=""></a>
+             
+                <p> <%= product.name %></p>
+              
+              
+               <p>$ <%= product.price %> </p>
+             
+            </article>
+            <% }) %>
+        </section>
+
+        <h2>Nuevos Lanzamientos</h2>
+
+        <section class="producto">
+          <% news.forEach((product)=> { %>
+            <article class="articulo detalle">
+
+              <a href="/product/detail/<%= product.id %>">
+                <img src="/images/products/<%= product.image %>" alt=""></a>
+              <p>
+                <%= product.name %>
+              </p>
+              <p>$<%= product.price %>  </p>
+              
+            </article>
+            <% }) %>
+        </section>
+      
+      </main>
+
+      <footer class="footer">
+
+        <div>
+          <nav>
+            <ul>
+              <li> <a href=""></a>Chatea con nosotros</li>
+              <li><a href=""></a>Ayuda</li>
+              <li> <a href=""></a>Defensa del consumidor</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="redes">
+          <div class="icono"><i class="fa-brands fa-facebook"></i></div>
+          <div class="icono"><i class="fa-brands fa-twitter"></i></div>
+          <div class="icono"><i class="fa-brands fa-instagram"></i></div>
+          <div class="icono"><i class="fa-brands fa-github"></i></div>
+          <div class="icono"><i class="fa-brands fa-linkedin"></i></div>
+        </div>
+      </footer>
+
+</body>
+
+</html>

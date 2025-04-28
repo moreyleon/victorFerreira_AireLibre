@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+}
+
+main {
+    background-color: #5dc9b6;
+}
+
+.articulo img {
+    width: 40%;
+    background-color: white;
+}
+
+
+
+
+
+.fa-credit-card {
+    margin: 20px;
+}
+
+.fa-wallet {
+    margin: 20px;
+}
+
+.comprar {
+    background: linear-gradient(#5dc9b6, #A50034);
+    padding: 5px;
+    border-radius: 4px;
+    margin: 10px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+
+
+
+@media (min-width:768px) {
+
+   
+    .detalle{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px; 
+        flex-direction: column;
+}
+.contenedor{
+    display: flex;
+flex-direction: column;
+align-content: flex-start;
+align-items: center;
+}
+
+.btnedit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    background: linear-gradient(#5dc9b6, #A50034);
+}
+.btnremove{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #A50034;
+}
+    
+
+}
+
+@media (min-width: 1024px) {
+
+
+
+}

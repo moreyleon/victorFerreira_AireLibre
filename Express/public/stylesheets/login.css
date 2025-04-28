@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.form-login label {
+    width: 100px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-login input {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 15px;
+}
+ 
+.ingresar{
+    background: linear-gradient(#5dc9b6, #A50034);
+    padding: 5px;
+    border-radius: 4px;
+    margin: 10px;
+    font-weight: 300;
+    font-size: 12px;
+    
+}
+.session{
+    margin: 10px;
+
+}
+
+
+@media(min-width: 768px){
+header{
+    padding: 20px;
+    align-items: center;
+}
+.header p{
+    display: block;
+    font-size: 30px;
+
+}
+p{
+    margin: 0;
+
+}
+.form{
+    display: flex;
+    width: 90vw;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
+.form-login{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 5px;
+}
+
+/*.olvidaste{
+   
+}*/
+
+}
+
+
+@media (min-width: 1024px){
+    
+}

@@ -1,0 +1,92 @@
+<%- include('../partials/head',{title:'Lista'}) %>
+
+  <body>
+    <header class="header">
+
+      <nav>
+
+        <ul>
+          <li><a href="/product/add ">Agregar</a></li>
+
+          <li><a href="/product/list">Lista de productos</a></li>
+          <li><a href="/users/admin"> Administrador</a></li>
+         </ul>
+      </nav>
+      <a href="/">
+        <i class="fa-solid fa-person-walking-arrow-right"></i>
+      </a>
+
+    </header>
+
+    <main>
+      <h1>Productos</h1>
+
+      <h2>Lista de productos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Marca</th>
+            <th>Categoría</th>
+
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <% products.forEach(({ id,category, brand, name, price})=> { %>
+
+            <tr>
+
+              <th>
+
+                <%= id %>
+              </th>
+
+              <th><a href="/product/edit/<%= id %>">
+                  <%= name %>
+                </a>
+
+              </th>
+              <th>
+                <%= price %>
+              </th>
+              <th>
+                <%= brand.name %>
+              </th>
+              <th>
+                <%= category.name %>
+
+              </th>
+
+            </tr>
+            <thead>
+              <th>
+                
+                  <a href="/product/edit/<%= id %>">
+                    <button type="submit" class="btnedit"> Editar</button>
+                  </a>
+                
+              </th>
+            </thead>
+            <thead>
+              <th>
+                
+                  <a href="/product/edit/<%= id %>">
+                    <button type="submit" class="btnremove">Eliminar</button>
+                  </a>
+                
+              </th>
+            </thead>
+            <% }) %>
+
+        </tbody>
+      </table>
+
+
+
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
