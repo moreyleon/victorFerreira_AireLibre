@@ -1,0 +1,46 @@
+
+.navegacion {
+  
+  
+     li{
+  padding: 10px;
+    list-style: none
+  }
+  ul{
+    display:flex;
+    justify-content: space-evenly;
+    
+  }
+  a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 2rem;
+    &:hover{
+      color: #A50034;
+    }
+  
+    }
+   
+    }
+    &:focus{
+      color:#A50034;
+    }
+  
+    
+  
+ 
+  
+  .logo{
+    position: relative;
+    bottom: 50px;
+    h1{
+        &:hover{
+            color: #A50034;
+          } 
+    }
+  }
+  /* body{
+    background: linear-gradient(#5dc9b6, #A50034);
+
+  } */

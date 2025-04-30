@@ -1,0 +1,54 @@
+<%- include('../partials/head',{title:"Login"}) %>
+
+    <body>
+        <header class="header">
+             <h1>Aire Libre</h1>
+            <h2>Login</h2>
+            <p>Vive tu propia Aventura!!!</p>
+                
+                   
+        </header>
+
+        <body>
+            <main>
+
+                <a href="/">
+                    <button class="volver">Volver</button>
+                    </a>
+                <form class="form" action="../users/identity" method="post">
+                   
+                    <div class="form-login">
+                        <label for="mail">Correo electronico</label>
+                        <input type="text" name="mail" required value="<%= locals.mail ? mail : ""%>">
+                        
+                    </div> 
+                     <div class="form-login">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" value="<%= locals.password ? password : ""%>">
+                       
+                    </div>
+                       <% if(locals.errores) {%>
+                            <p> Credenciales invalidas</p>
+                        <% } %>
+                         <div>
+                        <button  class="ingresar" type="submit">Ingresar</button>
+                        </div>
+                     
+                         <div class="session">
+                            <input type="checkbox" name="recordar">
+                            <label for="recordar" name="recordar" >Desea recordar su session?</label>
+                         </div>
+                      
+
+
+
+                        <div class="olvidaste">
+                            <p>¿Olvidaste tu contraseña?</p>
+                            <button class="ingresar" type="submit">Recuperar contraseña</button>
+                        </div>
+              </form>
+            </main>
+            <%- include('../partials/footer') %>
+        </body>
+
+        </html>

@@ -1,0 +1,55 @@
+[
+    {
+        
+        "name": "Juan",
+        "surname": "Pérez",
+        "mail": "juan.perez@example.com",
+        "password": "contraseña123",
+        "rolId": 1,
+        "image": "https://example.com/images/juan.jpg"
+    },
+    {
+    
+        "name": "María",
+        "surname": "Gómez",
+        "mail": "maria.gomez@example.com",
+        "password": "contraseña456",
+        "rolId": 2,
+        "image": "https://example.com/images/maria.jpg"
+    },
+    {
+        
+        "name": "Carlos",
+        "surname": "López",
+        "mail": "carlos.lopez@example.com",
+        "password": "contraseña789",
+        "rolId": 2,
+        "image": "https://example.com/images/carlos.jpg"
+    },
+    {
+        
+        "name": "Ana",
+        "surname": "Martínez",
+        "mail": "ana.martinez@example.com",
+        "password": "contraseña101",
+        "rolId": 2,
+        "image": "https://example.com/images/ana.jpg"
+    },
+    {
+        
+        "name": "victor ",
+        "surname": "ferreira",
+        "mail": "victor@hotmail.com",
+        "password": "$2b$10$luSYzLNjkARZO4HDq66j5.Agc6Sa6z5eV5p4RsT0/7XIVjLXHNQwe",
+        "rolId": 1
+},
+    {
+    
+        "name": "manuel",
+        "surname": "torrez",
+        "mail": "loro@gmail.com",
+        "password": "$2b$10$4t1VmYc6LWf7L51McT9Ugui1RpJ8d4gTeCmtKdCHnabBFDKS.Bvdu",
+        "rolId": 2
+ }
+  
+]
