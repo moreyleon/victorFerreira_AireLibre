@@ -7,7 +7,7 @@ const Products = () => {
 
   const getProducts = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/articulo/");
+      const response = await fetch("http://localhost:3000/api/articulo");
 
       if (!response.ok) {
         console.log("Error en la respuesta de la API");
@@ -15,7 +15,7 @@ const Products = () => {
       }
 
       const products = await response.json();
-      console.log("Respuesta de la API:", movies);
+      console.log("Respuesta de la API:", products);
 
       setProducts(products.data);
       setIsLoading(false);
@@ -28,7 +28,7 @@ const Products = () => {
     getProducts();
   }, []);
 
-  return <>{isLoading ? <h1>Loading...</h1> : <ProductsData data={products} urlCreate={"/Tables/products/create"} urlDetail={"/Tables/products/detail"} urlEdit={"/Tables/products/edit"} urlDelete={"/Tables/products/delete"} />}</>;
+  return <>{isLoading ? <h1>Loading...</h1> : <ProductsData data={products} urlCreate={"/Tables/products/create"} urlDetail={"/Tables/products/detail"} urlEdit={"/Tables/products/edit"} urlDelete={"/Tables/products/delete"} title="producto" />}</>;
 };
 
 export default Products;

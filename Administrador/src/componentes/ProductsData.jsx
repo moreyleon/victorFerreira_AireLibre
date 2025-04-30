@@ -38,13 +38,13 @@ function ProductsData({ data, title, urlCreate, urlEdit, urlDelete, urlDetail })
     };
     return (
       <>
-        <section>
-          <div >
-            <h1>{title}</h1>
+        <section className="tabla">
+         
+         <div className="titleTable"> 
           </div>
           <div >
             <Link to={`${urlCreate}`}>
-              <Button variant="success">Crear</Button>
+              {/* <Button variant="success">Crear</Button> */}
             </Link>
           </div>
           
@@ -53,7 +53,7 @@ function ProductsData({ data, title, urlCreate, urlEdit, urlDelete, urlDetail })
                 {Array.from(Object.keys(data[0])).map((prop, index) => (
                   <th key={index}>{prop}</th>
                 ))}
-                <th>Acciones</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -65,12 +65,12 @@ function ProductsData({ data, title, urlCreate, urlEdit, urlDelete, urlDetail })
                   <td>
                     <div >
                       <Link to={`${urlDetail}/${product.id}`}>
-                        <Button variant="info"></Button>
+                        {/* <Button variant="info"></Button> */}
                       </Link>
                       <Link to={`${urlEdit}/${product.id}`}>
-                        <Button variant="warning"></Button>
+                        {/* <Button variant="warning"></Button> */}
                       </Link>
-                      <Button variant="danger" onClick={(e) => modelDelete(e,product.id)}></Button>
+                      {/* <Button variant="danger" onClick={(e) => modelDelete(e,product.id)}></Button> */}
                     </div>
                   </td>
                 </tr>

@@ -1,0 +1,12 @@
+.tabla{
+    background: linear-gradient(#A50034);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.titleTable{
+   background-color: aqua;
+}

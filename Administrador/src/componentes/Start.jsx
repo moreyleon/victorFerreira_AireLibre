@@ -6,7 +6,7 @@ export default class Start extends Component {
   render() {
     return (
       <div className='start'>
-    <img src="" alt="" />
+    <img src="src/assets/images/aireLibre.png" alt="" />
 
 
       </div>
