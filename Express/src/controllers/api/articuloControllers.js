@@ -1,4 +1,4 @@
-const {Product}= require('../../database/models/product');
+const {Product}= require('../../database/models');
 
 
 let articuloControllers = {
@@ -31,6 +31,7 @@ let articuloControllers = {
             console.log(query);
       
             const product = await Product.findAll(query);
+           console.log(product);
       
             if (product.length === 0) {
               return res.status(404).json({
