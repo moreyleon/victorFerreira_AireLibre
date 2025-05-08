@@ -28,7 +28,13 @@ const Products = () => {
     getProducts();
   }, []);
 
-  return <>{isLoading ? <h1>Loading...</h1> : <ProductsData data={products} urlCreate={"/Tables/products/create"} urlDetail={"/Tables/products/detail"} urlEdit={"/Tables/products/edit"} urlDelete={"/Tables/products/delete"} title="producto" />}</>;
+  return <>{isLoading ? <h1>Loading...</h1> 
+    : <ProductsData data={products} 
+    urlCreate={"/Tables/products/create"}
+     urlDetail={"/Tables/products/detail"} 
+     urlEdit={"/Tables/products/edit"}
+      urlDelete={"/Tables/products/delete"} 
+      title="producto" />}</>;
 };
 
 export default Products;

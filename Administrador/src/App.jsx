@@ -9,6 +9,7 @@ import ProductsDetail from './Pages/ProductsDetail'
 import CreateProducts from './Pages/CreateProducts'
 import Start  from './componentes/Start';
 import './productsData.css'
+import Users from './componentes/Users';
 
 function App() {
 
@@ -18,10 +19,10 @@ function App() {
     <Header />
     <Routes>
               <Route path="/" element={<Start />} />
-              <Route path="/Usuarios" element={<h1>Usuarios</h1>} />
+              <Route path="/Usuarios" element={<Users />} />
               <Route path="/Productos" element={<Products />} />
-              <Route path="/Products/ProductsDetail/:id" element={<ProductsDetail />} />
-              <Route path="/Products/CreateProducts" element={<CreateProducts />} />
+              <Route path="/Productos/ProductsDetail/:id" element={<ProductsDetail />} />
+              <Route path="/Productos/CreateProducts" element={<CreateProducts />} />
              
             </Routes>
      

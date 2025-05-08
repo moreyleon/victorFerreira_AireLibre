@@ -9,7 +9,7 @@ const cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product');
-var buyRouter = require('./routes/buy');
+
 
 var apiarticuloRouter = require('./routes/api/articulo');
 //var categoryRouter = require('./routes/api/category');
@@ -40,7 +40,7 @@ app.use(session({
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/product', productRouter);
-app.use('/buy', buyRouter);
+
 
 app.use('/api/articulo', apiarticuloRouter);
 //app.use('/api/category', categoryRouter);
