@@ -1,12 +1,39 @@
-.tabla{
-    background: linear-gradient(#A50034);
-    border-radius: 10px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    
-}
 
-.titleTable{
-   background-color: aqua;
-}
+.tabla {
+    width: 100%;
+    margin: 20px auto;
+    background-color: #A50034;
+    border-radius: 10px;
+  }
+  
+  .tabla-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; 
+  }
+  
+  .tabla-productos th,
+  .tabla-productos td {
+    border: 2px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    word-wrap: break-word; 
+  }
+  
+  .tabla-productos th {
+    
+    font-weight: bold;
+  }
+  
+  .acciones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }

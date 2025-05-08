@@ -5,10 +5,6 @@ const { validationResult } = require("express-validator");
 const bcrypt = require('bcrypt');
 
 
-
-
-
-
 const usuario = {
 
   register: (req, res, next) => {

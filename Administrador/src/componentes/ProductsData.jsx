@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-
+import Button from "./Button";
+import Buttonedit from "./Buttonedit";
+import Buttondel from "./Buttondel";
 
 
 function ProductsData({ data, title, urlCreate, urlEdit, urlDelete, urlDetail }) {
@@ -40,44 +42,52 @@ function ProductsData({ data, title, urlCreate, urlEdit, urlDelete, urlDetail })
       <>
         <section className="tabla">
          
-         <div className="titleTable"> 
-          </div>
-          <div >
+        
+          <div className="tabla-header">
             <Link to={`${urlCreate}`}>
               {/* <Button variant="success">Crear</Button> */}
             </Link>
           </div>
-          
+          <table className="tabla-productos">
             <thead>
               <tr>
                 {Array.from(Object.keys(data[0])).map((prop, index) => (
                   <th key={index}>{prop}</th>
+                
                 ))}
-                <th></th>
+                <th>Accion</th>
               </tr>
             </thead>
+          
             <tbody>
               {data.map((product, index) => (
+               
                 <tr key={index}>
                   {Array.from(Object.keys(product)).map((element, index) => (
                     <td key={index + element}>{product[element]}</td>
                   ))}
                   <td>
-                    <div >
+
+                    <div className="acciones">
                       <Link to={`${urlDetail}/${product.id}`}>
-                        {/* <Button variant="info"></Button> */}
+                        <Button> <i class="fa-solid fa-eye"></i> </Button>
                       </Link>
                       <Link to={`${urlEdit}/${product.id}`}>
-                        {/* <Button variant="warning"></Button> */}
+                        <Buttonedit><i class="fa-solid fa-pen-to-square"></i></Buttonedit>
                       </Link>
-                      {/* <Button variant="danger" onClick={(e) => modelDelete(e,product.id)}></Button> */}
+                      
+                      <Buttondel variant="danger" onClick={(e) => modelDelete(e,product.id)} > <i class="fa-solid fa-eraser"></i> </Buttondel> 
+                        
+                    
                     </div>
                   </td>
                 </tr>
+                 
               ))}
             </tbody>
         
           {}
+          </table>
         </section>
       </>
     );

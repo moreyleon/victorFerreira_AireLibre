@@ -6,7 +6,7 @@ console.log('Sesión actual:', req.session.userLogin);
         return next()
         
     }
-    return res.redirect('products/productCartl')
+    return res.redirect('/users/login')
 
 
 }

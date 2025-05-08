@@ -1,0 +1,23 @@
+<%- include('../partials/head',{title:"Sector de compra"}) %>
+<%- include('../partials/header') %>
+
+
+<main>
+<h2>Mis compras</h2>
+ 
+<article class="articulo">
+    <img src="/images/products/<%= product.image %>"alt="">
+    <h2> <%= product.name %></h2>
+   
+    <p>$ <%= product.price %></p>
+    </article>
+
+    <div class="cantidad">
+ <button class="confirmar">Confirmar compra</button>
+ <button class="confirmar">Seguir comprando</button>
+<button class="confirmar" >Eliminar compra</button>    
+</div>
+
+</main>
+
+<%- include('../partials/footer') %>
