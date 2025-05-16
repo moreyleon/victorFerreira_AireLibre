@@ -17,10 +17,14 @@
                     <p>
                         $ <%= product.price %>
                     </p>
-                    <a href="/cart/<%= product.id %>">
-                    <button class="comprar">Comprar</button>
-            </a>
+                   
+                    <a href="#" onclick="agregarItem(event,'<%= product.id %>')" > <button class="confirmar"> Comprar </button> </a>
+               
                 </article>
+
+                <script src="/javascripts/cart.js"></script>
+                    
+                </script>
         
         </main>
 

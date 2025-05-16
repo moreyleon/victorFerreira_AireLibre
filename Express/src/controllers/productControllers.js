@@ -158,6 +158,36 @@ const producto = {
       console.log(error);
     }
   },
+search: async (req, res) => {
+        try {
+            const products = await db.Product.findAll({
+                include: ['images'],
+                where : {
+                    [Op.or]: [
+                        {
+                            name: {
+                                [Op.like]: `%${req.query.keywords}%`
+                            }
+                        },
+                        {
+                            description: {
+                                [Op.like]: `%${req.query.keywords}%`
+                            }
+                        }
+                    ]
+                }
+            })
+            return res.render('products/productsList', {
+                products,
+                toThousand
+            })
+        } catch (error) {
+            return res.status(500).render('error', {
+                message: error.message,
+            })
+        }
+    },
+ 
 };
 
 module.exports = producto;

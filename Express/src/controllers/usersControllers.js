@@ -57,7 +57,7 @@ const usuario = {
 },
   
   identity: async (req, res, next) => {
-const { mail, password, recordar } = req.body; 
+   const { mail, password, recordar } = req.body; 
 
 try {
   const errores = validationResult(req);

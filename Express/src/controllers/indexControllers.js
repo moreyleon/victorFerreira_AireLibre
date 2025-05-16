@@ -21,20 +21,7 @@ const home = {
       console.log(error);
     }
   },
-  cart: async (req, res, next) => {
-    const id = req.params.id;
-  try {
-    const product = await Product.findByPk(id, {
-      include: ["category", "brand"],
-    });
-    res.render("products/productCart", { product });
-  } catch (error) {
-    console.log(error);
-  }
-    
-
-    
-  }
+ 
 };
 
 module.exports = home;
